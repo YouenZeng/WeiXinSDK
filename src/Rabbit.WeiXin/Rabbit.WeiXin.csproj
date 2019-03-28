@@ -6,7 +6,7 @@
     <Copyright>© RabbitHub. All rights reserved.</Copyright>
     <VersionPrefix>0.3</VersionPrefix>
     <Authors>majian</Authors>
-    <TargetFrameworks>net40;net45;netstandard1.6</TargetFrameworks>
+    <TargetFrameworks>net40;net45;netstandard1.6;netcoreapp2.2</TargetFrameworks>
     <AssemblyName>Rabbit.WeiXin</AssemblyName>
     <PackageId>Rabbit.WeiXin</PackageId>
     <PackageTags> RabbitHub;WeiXinSDK;Rabbit.WeiXin</PackageTags>
@@ -55,6 +55,20 @@
     <PackageReference Include="System.Xml.XmlDocument" Version="4.3.0" />
     <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
   </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.2' ">
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
+    <PackageReference Include="System.Collections.Concurrent" Version="4.3.0" />
+    <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
+    <PackageReference Include="System.Net.Requests" Version="4.3.0" />
+    <PackageReference Include="System.Net.WebHeaderCollection" Version="4.3.0" />
+    <PackageReference Include="System.Reflection" Version="4.3.0" />
+    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.3.0" />
+    <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.0" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.0" />
+    <PackageReference Include="System.Xml.XmlDocument" Version="4.3.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='net40'">
     <DefineConstants>TRACE;DEBUG;NET40;NET</DefineConstants>
@@ -69,4 +83,8 @@
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard1.6'">
     <DocumentationFile>bin\Debug\netstandard1.6\Rabbit.WeiXin.xml</DocumentationFile>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp2.2'">
+    <DocumentationFile>bin\Debug\netcoreapp2.2\Rabbit.WeiXin.xml</DocumentationFile>
+  </PropertyGroup>  
 </Project>

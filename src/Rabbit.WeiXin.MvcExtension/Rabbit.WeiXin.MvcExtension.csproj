@@ -5,7 +5,7 @@
     <Copyright>© RabbitHub. All rights reserved.</Copyright>
     <VersionPrefix>0.3-beta1</VersionPrefix>
     <Authors>majian</Authors>
-    <TargetFrameworks>net40;net45;netstandard1.6</TargetFrameworks>
+    <TargetFrameworks>net40;net45;netstandard1.6;netcoreapp2.2</TargetFrameworks>
     <AssemblyName>Rabbit.WeiXin.MvcExtension</AssemblyName>
     <PackageId>Rabbit.WeiXin.MvcExtension</PackageId>
     <PackageTags> RabbitHub;WeiXinSDK;Rabbit.WeiXin</PackageTags>
@@ -44,6 +44,10 @@
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.0.3" />
   </ItemGroup>
+  
+    <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.2' ">
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+  </ItemGroup>
 
   <PropertyGroup Condition="'$(TargetFramework)'=='net40'">
     <DefineConstants>TRACE;DEBUG;NET40;NET</DefineConstants>
@@ -57,5 +61,10 @@
 
   <PropertyGroup Condition="'$(TargetFramework)'=='netstandard1.6'">
     <DocumentationFile>bin\Debug\netstandard1.6\Rabbit.WeiXin.xml</DocumentationFile>
+  </PropertyGroup>
+  
+  
+  <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp2.2'">
+    <DocumentationFile>bin\Debug\netcoreapp2.2\Rabbit.WeiXin.xml</DocumentationFile>
   </PropertyGroup>
 </Project>
