@@ -5,8 +5,7 @@
     /// </summary>
     public sealed class QrAlreadySubscribeEventKeyMessage : QrEventKeyMessageBase
     {
-        #region Overrides of SubscribeEventMessage
-
+        
         /// <summary>
         /// 事件类型。
         /// </summary>
@@ -15,6 +14,5 @@
             get { return EventType.Scan; }
         }
 
-        #endregion Overrides of SubscribeEventMessage
-    }
+            }
 }

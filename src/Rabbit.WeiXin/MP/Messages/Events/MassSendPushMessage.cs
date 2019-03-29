@@ -46,8 +46,7 @@
         /// </summary>
         public ulong ErrorCount { get; set; }
 
-        #region Overrides of EventMessageBase
-
+        
         /// <summary>
         /// 事件类型。
         /// </summary>
@@ -56,15 +55,12 @@
             get { return EventType.MassSendJobFinish; }
         }
 
-        #endregion Overrides of EventMessageBase
-
-        #region Implementation of IMessageIdentity
-
+        
+        
         /// <summary>
         /// 消息id，64位整型
         /// </summary>
         public long MessageId { get; set; }
 
-        #endregion Implementation of IMessageIdentity
-    }
+            }
 }

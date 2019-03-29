@@ -22,8 +22,7 @@ namespace Rabbit.WeiXin
 
     internal sealed class SignatureService : ISignatureService
     {
-        #region Implementation of ISignatureService
-
+        
         /// <summary>
         /// 签名检验。
         /// </summary>
@@ -37,10 +36,8 @@ namespace Rabbit.WeiXin
             return new[] { signature, timestamp, nonce, token }.All(i => !string.IsNullOrEmpty(i)) && signature.Equals(GetSignature(timestamp, nonce, token));
         }
 
-        #endregion Implementation of ISignatureService
-
-        #region Private Method
-
+        
+        
         private static string GetSignature(string timestamp, string nonce, string token = null)
         {
             var arr = new[] { token, timestamp, nonce }.OrderBy(z => z).ToArray();
@@ -56,6 +53,5 @@ namespace Rabbit.WeiXin
             return enText.ToString();
         }
 
-        #endregion Private Method
-    }
+            }
 }

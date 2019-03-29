@@ -6,12 +6,10 @@ namespace Rabbit.WeiXin.Utility
 {
     internal static class EnumParseCacheHelper
     {
-        #region Field
-
+        
         private static readonly ConcurrentDictionary<string, KeyValuePair<object, bool>> CacheDictionary = new ConcurrentDictionary<string, KeyValuePair<object, bool>>();
 
-        #endregion Field
-
+        
         public static T Parse<T>(string value) where T : struct
         {
             T result;

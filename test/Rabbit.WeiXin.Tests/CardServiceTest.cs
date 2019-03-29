@@ -10,23 +10,18 @@ namespace Rabbit.WeiXin.Tests
 {
     public class CardServiceTest : ApiTestBase
     {
-        #region Field
-
+        
         readonly private ICardService _cardService;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         public CardServiceTest()
         {
             _cardService = new CardService(AccountModel);
         }
 
-        #endregion Constructor
-
-        #region Test Method
-
+        
+        
         [Fact]
         public void UploadLogoTest()
         {
@@ -330,10 +325,8 @@ namespace Rabbit.WeiXin.Tests
             Assert.NotNull(result.QrCodeUrl);
         }
 
-        #endregion Test Method
-
-        #region Private Method
-
+        
+        
         private string CreateGroupCard()
         {
             var baseInfo = new CreateCardBaseInfo
@@ -366,6 +359,5 @@ namespace Rabbit.WeiXin.Tests
             });
         }
 
-        #endregion Private Method
-    }
+            }
 }

@@ -16,8 +16,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Request
     /// </summary>
     internal sealed class EventRequestMessageFormatter : IMessageFormatter
     {
-        #region Field
-
+        
         private static readonly IDictionary<string, IMessageFormatter> Mappings = new Dictionary<string, IMessageFormatter>
         {
             {EventType.UnSubscribe.ToString().ToLower(), new UnSubscribeEventMessageFormatter()},
@@ -51,10 +50,8 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Request
         private static readonly SubscribeEventMessageFormatter SubscribeEventMessageFormatter = new SubscribeEventMessageFormatter();
         private static readonly QrSubscribeEventKeyMessageFormatter QrSubscribeEventKeyMessageFormatter = new QrSubscribeEventKeyMessageFormatter();
 
-        #endregion Field
-
-        #region Implementation of IMessageFormatter
-
+        
+        
         public IMessageBase Deserialize(XContainer container)
         {
             var eventType = GetValue(container, "Event").ToLower();
@@ -77,10 +74,8 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Request
             throw new NotImplementedException();
         }
 
-        #endregion Implementation of IMessageFormatter
-
-        #region Private Method
-
+        
+        
         private static string GetValue(XContainer container, string elementName)
         {
             var typeElemment = container.Element(elementName);
@@ -90,6 +85,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Request
             return typeElemment.Value;
         }
 
-        #endregion Private Method
-    }
+            }
 }

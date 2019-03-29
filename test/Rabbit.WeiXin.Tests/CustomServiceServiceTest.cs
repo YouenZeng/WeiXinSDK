@@ -11,14 +11,11 @@ namespace Rabbit.WeiXin.Tests
     
     public class CustomServiceServiceTest : ApiTestBase, IDisposable
     {
-        #region Field
-
+        
         private readonly ICustomServiceService _customServiceService;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         public CustomServiceServiceTest()
         {
             _customServiceService = new CustomServiceService(AccountModel);
@@ -26,10 +23,8 @@ namespace Rabbit.WeiXin.Tests
             Reset();
         }
 
-        #endregion Constructor
-
-        #region Test Method
-
+        
+        
         [Fact]
         public void AddAccountTest()
         {
@@ -88,10 +83,8 @@ namespace Rabbit.WeiXin.Tests
             Assert.NotNull(records);
         }
 
-        #endregion Test Method
-
-        #region Private Method
-
+        
+        
         private void Reset()
         {
             if (_customServiceService.GetAccounts().Any(i => i.Account == "test@chunsun_cc"))
@@ -130,10 +123,8 @@ namespace Rabbit.WeiXin.Tests
             }
         }
 
-        #endregion Private Method
-
-        #region Implementation of IDisposable
-
+        
+        
         /// <summary>
         /// 执行与释放或重置非托管资源相关的应用程序定义的任务。
         /// </summary>
@@ -142,6 +133,5 @@ namespace Rabbit.WeiXin.Tests
             Reset();
         }
 
-        #endregion Implementation of IDisposable
-    }
+            }
 }

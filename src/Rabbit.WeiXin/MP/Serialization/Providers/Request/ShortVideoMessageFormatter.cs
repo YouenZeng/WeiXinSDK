@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Request
 {
     internal sealed class ShortVideoMessageFormatter : XmlMessageFormatterBase<RequestMessageShortVideo>
     {
-        #region Overrides of XmlMessageFormatterBase<RequestMessageShortVideo>
-
+        
         public override RequestMessageShortVideo Deserialize(XContainer container)
         {
             return SetBaseInfo(container, new RequestMessageShortVideo
@@ -21,6 +20,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Request
             throw new NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<RequestMessageShortVideo>
-    }
+            }
 }

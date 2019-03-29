@@ -28,14 +28,11 @@ namespace Rabbit.WeiXin.Handlers
     /// </summary>
     public sealed class HandlerBuilder : IHandlerBuilder
     {
-        #region Field
-
+        
         private readonly IList<KeyValuePair<object, object[]>> _middlewares;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的处理构造者。
         /// </summary>
@@ -45,10 +42,8 @@ namespace Rabbit.WeiXin.Handlers
             Properties["Rabbit.Middlewares"] = _middlewares = new List<KeyValuePair<object, object[]>>();
         }
 
-        #endregion Constructor
-
-        #region Implementation of IHandlerBuilder
-
+        
+        
         /// <summary>
         /// 属性字典。
         /// </summary>
@@ -67,8 +62,7 @@ namespace Rabbit.WeiXin.Handlers
             return this;
         }
 
-        #endregion Implementation of IHandlerBuilder
-    }
+            }
 
     /// <summary>
     /// 处理构造者扩展方法。

@@ -19,8 +19,7 @@ namespace Rabbit.WeiXin.AspNetCoreSample.Handlers
         {
         }
 
-        #region Overrides of MessageHandlerMiddleware
-
+        
         /// <summary>
         /// 文字类型请求
         /// </summary>
@@ -58,6 +57,5 @@ namespace Rabbit.WeiXin.AspNetCoreSample.Handlers
             return new ResponseMessageText(builder.ToString());
         }
 
-        #endregion Overrides of MessageHandlerMiddleware
-    }
+            }
 }

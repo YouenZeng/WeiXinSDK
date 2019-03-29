@@ -15,8 +15,7 @@
         /// </summary>
         public string Recognition { get; set; }
 
-        #region Overrides of MessageBase
-
+        
         /// <summary>
         /// 消息类型。
         /// </summary>
@@ -25,15 +24,12 @@
             get { return RequestMessageType.Voice; }
         }
 
-        #endregion Overrides of MessageBase
-
-        #region Implementation of IMediaMessage
-
+        
+        
         /// <summary>
         /// 媒体id，可以调用多媒体文件下载接口拉取数据。
         /// </summary>
         public string MediaId { get; set; }
 
-        #endregion Implementation of IMediaMessage
-    }
+            }
 }

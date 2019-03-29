@@ -112,8 +112,7 @@ namespace Rabbit.WeiXin.Handlers
             this.SetDependencyResolver(DefaultDependencyResolver.Instance);
         }
 
-        #region Implementation of IHandlerContext
-
+        
 #if NET
 
         /// <summary>
@@ -167,8 +166,7 @@ namespace Rabbit.WeiXin.Handlers
             return this;
         }
 
-        #endregion Implementation of IHandlerContext
-    }
+            }
 
     /// <summary>
     /// 处理上下文扩展方法。

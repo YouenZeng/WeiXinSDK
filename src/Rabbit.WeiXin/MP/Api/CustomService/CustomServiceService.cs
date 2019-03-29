@@ -71,14 +71,11 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
     /// </summary>
     public sealed class CustomServiceService : ICustomServiceService
     {
-        #region Field
-
+        
         private readonly AccountModel _accountModel;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的多客服服务实例。
         /// </summary>
@@ -88,10 +85,8 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
             _accountModel = accountModel;
         }
 
-        #endregion Constructor
-
-        #region Implementation of ICustomService
-
+        
+        
         /// <summary>
         /// 添加客服账号（每个公众号最多添加10个客服账号）。
         /// </summary>
@@ -245,11 +240,9 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
             }).ToArray();
         }
 
-        #endregion Implementation of ICustomService
-    }
+            }
 
-    #region Help Class
-
+    
     /// <summary>
     /// 服务记录。
     /// </summary>
@@ -388,5 +381,4 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
         public string HeadPictureUrl { get; set; }
     }
 
-    #endregion Help Class
-}
+    }

@@ -49,14 +49,11 @@ namespace Rabbit.WeiXin.MP.Api.QrCode
     /// </summary>
     public sealed class QrCodeService : IQrCodeService
     {
-        #region Field
-
+        
         private readonly AccountModel _accountModel;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个二维码服务实例。
         /// </summary>
@@ -66,10 +63,8 @@ namespace Rabbit.WeiXin.MP.Api.QrCode
             _accountModel = accountModel;
         }
 
-        #endregion Constructor
-
-        #region Implementation of IQrCodeService
-
+        
+        
         /// <summary>
         /// 创建一个二维码。
         /// </summary>
@@ -115,11 +110,9 @@ namespace Rabbit.WeiXin.MP.Api.QrCode
             return "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=" + ticket;
         }
 
-        #endregion Implementation of IQrCodeService
-    }
+            }
 
-    #region Help Class
-
+    
     /// <summary>
     /// 二维码服务扩展方法。
     /// </summary>
@@ -174,8 +167,7 @@ namespace Rabbit.WeiXin.MP.Api.QrCode
     /// </summary>
     public abstract class CreateQrCodeModel
     {
-        #region Field
-
+        
         /// <summary>
         /// 二维码类型映射。
         /// </summary>
@@ -186,10 +178,8 @@ namespace Rabbit.WeiXin.MP.Api.QrCode
             {QrCodeType.ForeverString, "QR_LIMIT_STR_SCENE"},
         };
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的创建二维码模型。
         /// </summary>
@@ -206,8 +196,7 @@ namespace Rabbit.WeiXin.MP.Api.QrCode
             Type = qrCodeType;
         }
 
-        #endregion Constructor
-
+        
         /// <summary>
         /// 二维码类型。
         /// </summary>
@@ -410,5 +399,4 @@ namespace Rabbit.WeiXin.MP.Api.QrCode
         public byte[] Data { get; set; }
     }
 
-    #endregion Help Class
-}
+    }

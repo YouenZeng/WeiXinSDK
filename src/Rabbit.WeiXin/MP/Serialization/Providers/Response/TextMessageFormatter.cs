@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Response
 {
     internal sealed class TextMessageFormatter : XmlMessageFormatterBase<ResponseMessageText>
     {
-        #region Overrides of MessageFormatterBase<RequestMessageText>
-
+        
         public override ResponseMessageText Deserialize(XContainer container)
         {
             throw new NotImplementedException();
@@ -19,6 +18,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Response
                 .AppendFormat("<Content><![CDATA[{0}]]></Content>", graph.Content));
         }
 
-        #endregion Overrides of MessageFormatterBase<RequestMessageText>
-    }
+            }
 }

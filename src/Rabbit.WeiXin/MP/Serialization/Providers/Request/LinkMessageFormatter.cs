@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Request
 {
     internal sealed class LinkMessageFormatter : XmlMessageFormatterBase<RequestMessageLink>
     {
-        #region Overrides of XmlMessageFormatterBase<RequestMessageLink>
-
+        
         public override RequestMessageLink Deserialize(XContainer container)
         {
             return SetBaseInfo(container, new RequestMessageLink
@@ -23,6 +22,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Request
             throw new NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<RequestMessageLink>
-    }
+            }
 }

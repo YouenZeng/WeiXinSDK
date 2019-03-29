@@ -8,23 +8,18 @@ namespace Rabbit.WeiXin.Tests
     
     public class QrCodeServiceTest : ApiTestBase
     {
-        #region Field
-
+        
         private readonly IQrCodeService _qrCodeService;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         public QrCodeServiceTest()
         {
             _qrCodeService = new QrCodeService(AccountModel);
         }
 
-        #endregion Constructor
-
-        #region Test Method
-
+        
+        
         [Fact]
         public void CreateTemporaryTest()
         {
@@ -62,6 +57,5 @@ namespace Rabbit.WeiXin.Tests
             Assert.Equal("https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=" + ticket, _qrCodeService.GetQrCodeUrl(ticket));
         }
 
-        #endregion Test Method
-    }
+            }
 }

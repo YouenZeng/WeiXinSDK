@@ -25,14 +25,11 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
     /// </summary>
     public sealed class CustomServiceMessageService : ICustomServiceMessageService
     {
-        #region Field
-
+        
         private readonly AccountModel _accountModel;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的客服消息服务实例。
         /// </summary>
@@ -42,10 +39,8 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
             _accountModel = accountModel;
         }
 
-        #endregion Constructor
-
-        #region Implementation of ICustomServiceInterfaceService
-
+        
+        
         /// <summary>
         /// 发送消息。
         /// </summary>
@@ -57,11 +52,9 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
             WeiXinHttpHelper.Post(url, message.GetJson());
         }
 
-        #endregion Implementation of ICustomServiceInterfaceService
-    }
+            }
 
-    #region Help Class
-
+    
     /// <summary>
     /// 客服消息类型。
     /// </summary>
@@ -185,8 +178,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
         [Required]
         public string Content { get; set; }
 
-        #region Overrides of CustomServiceMessage
-
+        
         /// <summary>
         /// 消息类型
         /// </summary>
@@ -202,8 +194,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
             return obj.ToString();
         }
 
-        #endregion Overrides of CustomServiceMessage
-    }
+            }
 
     /// <summary>
     /// 图片客服消息。
@@ -225,8 +216,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
         [Required]
         public string MediaId { get; set; }
 
-        #region Overrides of CustomServiceMessage
-
+        
         /// <summary>
         /// 消息类型
         /// </summary>
@@ -242,8 +232,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
             return obj.ToString();
         }
 
-        #endregion Overrides of CustomServiceMessage
-    }
+            }
 
     /// <summary>
     /// 语音客服消息。
@@ -265,8 +254,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
         [Required]
         public string MediaId { get; set; }
 
-        #region Overrides of CustomServiceMessage
-
+        
         /// <summary>
         /// 消息类型
         /// </summary>
@@ -275,8 +263,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
             get { return CustomServiceMessageType.Voice; }
         }
 
-        #endregion Overrides of CustomServiceMessage
-
+        
         internal override string GetJson()
         {
             var obj = GetBasicJsonObject();
@@ -321,8 +308,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
         /// </summary>
         public string Description { get; set; }
 
-        #region Overrides of CustomServiceMessage
-
+        
         /// <summary>
         /// 消息类型
         /// </summary>
@@ -331,8 +317,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
             get { return CustomServiceMessageType.Video; }
         }
 
-        #endregion Overrides of CustomServiceMessage
-
+        
         internal override string GetJson()
         {
             var obj = GetBasicJsonObject();
@@ -389,8 +374,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
         /// </summary>
         public string Description { get; set; }
 
-        #region Overrides of CustomServiceMessage
-
+        
         /// <summary>
         /// 消息类型
         /// </summary>
@@ -399,8 +383,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
             get { return CustomServiceMessageType.Music; }
         }
 
-        #endregion Overrides of CustomServiceMessage
-
+        
         internal override string GetJson()
         {
             var obj = GetBasicJsonObject();
@@ -421,14 +404,11 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
     /// </summary>
     public sealed class CustomServiceMessageNews : CustomServiceMessage
     {
-        #region Field
-
+        
         private const ushort ArticleMaxCount = 10;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的图文客服消息。
         /// </summary>
@@ -443,8 +423,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
             Articles = articles;
         }
 
-        #endregion Constructor
-
+        
         /// <summary>
         /// 文章类型。
         /// </summary>
@@ -491,8 +470,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
             }
         }
 
-        #region Public Method
-
+        
         /// <summary>
         /// 追加文章，如果 <see cref="Articles"/> 数量大于10则忽略。
         /// </summary>
@@ -522,10 +500,8 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
             return Articles == null || Articles.Length < ArticleMaxCount;
         }
 
-        #endregion Public Method
-
-        #region Overrides of CustomServiceMessage
-
+        
+        
         /// <summary>
         /// 消息类型
         /// </summary>
@@ -534,8 +510,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
             get { return CustomServiceMessageType.News; }
         }
 
-        #endregion Overrides of CustomServiceMessage
-
+        
         internal override string GetJson()
         {
             var obj = GetBasicJsonObject();
@@ -567,8 +542,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
         /// </summary>
         public string MediaId { get; set; }
 
-        #region Overrides of CustomServiceMessage
-
+        
         /// <summary>
         /// 消息类型。
         /// </summary>
@@ -588,8 +562,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
             return obj.ToString();
         }
 
-        #endregion Overrides of CustomServiceMessage
-    }
+            }
 
     /// <summary>
     /// 卡券客服消息。
@@ -615,8 +588,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
         /// </summary>
         public string Text { get; set; }
 
-        #region Overrides of CustomServiceMessage
-
+        
         /// <summary>
         /// 消息类型
         /// </summary>
@@ -625,8 +597,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
             get { return CustomServiceMessageType.Card; }
         }
 
-        #endregion Overrides of CustomServiceMessage
-
+        
         internal override string GetJson()
         {
             var obj = GetBasicJsonObject(false);
@@ -640,5 +611,4 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
         }
     }
 
-    #endregion Help Class
-}
+    }

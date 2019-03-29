@@ -20,8 +20,7 @@ namespace Rabbit.WeiXin.Handlers.Impl
         {
         }
 
-        #region Overrides of HandlerMiddleware
-
+        
         /// <summary>
         /// 调用。
         /// </summary>
@@ -48,8 +47,7 @@ namespace Rabbit.WeiXin.Handlers.Impl
                 var responseMessageFactory = dependencyResolver.GetService<IResponseMessageFactory>();
                 var content = responseMessageFactory.GetXmlByReponseMessage(responseMessage);
 
-                #region Encrypt
-
+                
                 if (!string.IsNullOrWhiteSpace(content))
                 {
                     var parameters = context.GetRequestParameters();
@@ -69,14 +67,12 @@ namespace Rabbit.WeiXin.Handlers.Impl
                     }
                 }
 
-                #endregion Encrypt
-
+                
                 context.ResponseXml = content;
             }
 
             return Next.Invoke(context);
         }
 
-        #endregion Overrides of HandlerMiddleware
-    }
+            }
 }

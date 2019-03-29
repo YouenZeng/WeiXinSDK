@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event
 {
     internal sealed class ShakearoundUserShakeMessageFormatter : XmlMessageFormatterBase<ShakearoundUserShakeMessage>
     {
-        #region Overrides of XmlMessageFormatterBase<ShakearoundUserShakeMessage>
-
+        
         /// <summary>
         /// 反序列化。
         /// </summary>
@@ -34,10 +33,8 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event
             throw new System.NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<ShakearoundUserShakeMessage>
-
-        #region Private Method
-
+        
+        
         private ShakearoundUserShakeMessage.BeaconInfo GetBeaconInfo(XElement container)
         {
             return new ShakearoundUserShakeMessage.BeaconInfo
@@ -49,6 +46,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event
             };
         }
 
-        #endregion Private Method
-    }
+            }
 }

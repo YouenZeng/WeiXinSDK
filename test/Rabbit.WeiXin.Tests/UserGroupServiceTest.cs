@@ -9,23 +9,18 @@ namespace Rabbit.WeiXin.Tests
     
     public class UserGroupServiceTest : ApiTestBase
     {
-        #region Field
-
+        
         private readonly IUserGroupService _userGroupService;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         public UserGroupServiceTest()
         {
             _userGroupService = new UserGroupService(AccountModel);
         }
 
-        #endregion Constructor
-
-        #region Test Method
-
+        
+        
         [Fact]
         public void CreateTest()
         {
@@ -88,6 +83,5 @@ namespace Rabbit.WeiXin.Tests
             Assert.Equal(outCount - 1, newCount);
         }
 
-        #endregion Test Method
-    }
+            }
 }

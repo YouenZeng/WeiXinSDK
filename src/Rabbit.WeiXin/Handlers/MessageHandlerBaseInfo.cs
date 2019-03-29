@@ -8,8 +8,7 @@ namespace Rabbit.WeiXin.Handlers
     /// </summary>
     public sealed class MessageHandlerBaseInfo
     {
-        #region Constructor
-
+        
         /// <summary>
         /// 初始化一个新的消息处理基本信息。
         /// </summary>
@@ -26,8 +25,7 @@ namespace Rabbit.WeiXin.Handlers
             Token = token.NotEmptyOrWhiteSpace("token");
         }
 
-        #endregion Constructor
-
+        
         /// <summary>
         /// 应用ID。
         /// </summary>

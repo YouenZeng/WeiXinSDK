@@ -41,13 +41,11 @@
         /// </summary>
         public BeaconInfo[] AroundBeacons { get; set; }
 
-        #region Overrides of EventMessageBase
-
+        
         /// <summary>
         /// 事件类型。
         /// </summary>
         public override EventType EventType { get { return EventType.ShakearoundUserShake; } }
 
-        #endregion Overrides of EventMessageBase
-    }
+            }
 }

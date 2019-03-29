@@ -333,14 +333,11 @@ namespace Rabbit.WeiXin.MP.Api.Store
     /// </summary>
     public sealed class StoreService : IStoreService
     {
-        #region Field
-
+        
         private readonly AccountModel _accountModel;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的门店服务实例。
         /// </summary>
@@ -350,10 +347,8 @@ namespace Rabbit.WeiXin.MP.Api.Store
             _accountModel = accountModel;
         }
 
-        #endregion Constructor
-
-        #region Implementation of IStoreService
-
+        
+        
         /// <summary>
         /// 上传图片。
         /// </summary>
@@ -469,6 +464,5 @@ namespace Rabbit.WeiXin.MP.Api.Store
             WeiXinHttpHelper.PostString(url, Encoding.UTF8.GetBytes(obj.ToString()));
         }
 
-        #endregion Implementation of IStoreService
-    }
+            }
 }

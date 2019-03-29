@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Response
 {
     internal sealed class MusicMessageFormatter : XmlMessageFormatterBase<ResponseMessageMusic>
     {
-        #region Overrides of XmlMessageFormatterBase<ResponseMessageMusic>
-
+        
         public override ResponseMessageMusic Deserialize(XContainer container)
         {
             throw new NotImplementedException();
@@ -25,6 +24,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Response
                 .Append("</Music>"));
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<ResponseMessageMusic>
-    }
+            }
 }

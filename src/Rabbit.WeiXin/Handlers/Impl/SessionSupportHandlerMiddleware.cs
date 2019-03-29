@@ -14,8 +14,7 @@ namespace Rabbit.WeiXin.Handlers.Impl
     /// </summary>
     public sealed class UserSessionRemovedEventArgs : EventArgs
     {
-        #region Constructor
-
+        
         /// <summary>
         /// 初始化一个新的用户会话删除事件参数。
         /// </summary>
@@ -27,8 +26,7 @@ namespace Rabbit.WeiXin.Handlers.Impl
             OpenId = openId.NotEmptyOrWhiteSpace("openId");
         }
 
-        #endregion Constructor
-
+        
         /// <summary>
         /// 用户会话。
         /// </summary>
@@ -82,26 +80,21 @@ namespace Rabbit.WeiXin.Handlers.Impl
     /// </summary>
     internal class UserSessionCollection : IUserSessionCollection
     {
-        #region Property
-
+        
         /// <summary>
         /// 会话过期时间。
         /// </summary>
         public TimeSpan Timeout { get; private set; }
 
-        #endregion Property
-
-        #region Field
-
+        
+        
         /// <summary>
         /// 用户会话字典。
         /// </summary>
         private readonly ConcurrentDictionary<string, UserSession> _concurrentDictionary = new ConcurrentDictionary<string, UserSession>();
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的用户会话集合，过期时间为20分钟。
         /// </summary>
@@ -123,10 +116,8 @@ namespace Rabbit.WeiXin.Handlers.Impl
             Timeout = timeout;
         }
 
-        #endregion Constructor
-
-        #region Public Method
-
+        
+        
         /// <summary>
         /// 获取或者添加一个用户会话。
         /// </summary>
@@ -158,25 +149,21 @@ namespace Rabbit.WeiXin.Handlers.Impl
             });
         }
 
-        #endregion Public Method
-    }
+            }
 
     /// <summary>
     /// 用户会话。
     /// </summary>
     internal sealed class UserSession : IUserSession
     {
-        #region Field
-
+        
         private event EventHandler<UserSessionRemovedEventArgs> RemovedHandler;
 
         private DateTime _lastActiveTime = DateTime.Now;
         private readonly IDictionary<object, object> _session = new Dictionary<object, object>();
 
-        #endregion Field
-
-        #region Property
-
+        
+        
         /// <summary>
         /// 最后活动时间。
         /// </summary>
@@ -185,10 +172,8 @@ namespace Rabbit.WeiXin.Handlers.Impl
             get { return _lastActiveTime; }
         }
 
-        #endregion Property
-
-        #region Internal Method
-
+        
+        
         /// <summary>
         /// 更新最后活动时间。
         /// </summary>
@@ -210,10 +195,8 @@ namespace Rabbit.WeiXin.Handlers.Impl
                 handler(this, new UserSessionRemovedEventArgs(this, openId));
         }
 
-        #endregion Internal Method
-
-        #region Implementation of IUserSession
-
+        
+        
         /// <summary>
         /// 获取或设置一个会话值。
         /// </summary>
@@ -234,22 +217,18 @@ namespace Rabbit.WeiXin.Handlers.Impl
             remove { RemovedHandler -= value; }
         }
 
-        #endregion Implementation of IUserSession
-    }
+            }
 
     /// <summary>
     /// 会话支持处理中间件。
     /// </summary>
     public sealed class SessionSupportHandlerMiddleware : HandlerMiddleware, IDisposable
     {
-        #region Field
-
+        
         private IUserSessionCollection _sessionCollection;
 
-        #endregion Field
-
-        #region Overrides of HandlerMiddleware
-
+        
+        
         /// <summary>
         /// 初始化一个新的处理中间件。
         /// </summary>
@@ -275,10 +254,8 @@ namespace Rabbit.WeiXin.Handlers.Impl
             return Next.Invoke(context);
         }
 
-        #endregion Overrides of HandlerMiddleware
-
-        #region Implementation of IDisposable
-
+        
+        
         /// <summary>
         /// 执行与释放或重置非托管资源相关的应用程序定义的任务。
         /// </summary>
@@ -288,8 +265,7 @@ namespace Rabbit.WeiXin.Handlers.Impl
                 _sessionCollection.Compression();
         }
 
-        #endregion Implementation of IDisposable
-    }
+            }
 }
 
 namespace Rabbit.WeiXin.Handlers

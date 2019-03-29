@@ -7,8 +7,7 @@ namespace Rabbit.WeiXin.MP.Messages.Events
     /// </summary>
     public abstract class EventMessageBase : MessageBase, IRequestMessageBase
     {
-        #region Overrides of MessageBase
-
+        
         /// <summary>
         /// 消息类型。
         /// </summary>
@@ -17,8 +16,7 @@ namespace Rabbit.WeiXin.MP.Messages.Events
             get { return RequestMessageType.Event; }
         }
 
-        #endregion Overrides of MessageBase
-
+        
         /// <summary>
         /// 事件类型。
         /// </summary>

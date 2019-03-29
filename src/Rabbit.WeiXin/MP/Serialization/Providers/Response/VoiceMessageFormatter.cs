@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Response
 {
     internal sealed class VoiceMessageFormatter : XmlMessageFormatterBase<ResponseMessageVoice>
     {
-        #region Overrides of XmlMessageFormatterBase<RequestMessageVoice>
-
+        
         public override ResponseMessageVoice Deserialize(XContainer container)
         {
             throw new NotImplementedException();
@@ -21,6 +20,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Response
                 .Append("</Voice>"));
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<RequestMessageVoice>
-    }
+            }
 }

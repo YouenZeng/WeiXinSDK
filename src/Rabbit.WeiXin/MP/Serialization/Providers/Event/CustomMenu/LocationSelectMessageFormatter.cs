@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.CustomMenu
 {
     internal sealed class LocationSelectMessageFormatter : XmlMessageFormatterBase<LocationSelectMessage>
     {
-        #region Overrides of XmlMessageFormatterBase<LocationSelectCustomMenuEventMessage>
-
+        
         public override LocationSelectMessage Deserialize(XContainer container)
         {
             var info = container.Element("SendLocationInfo");
@@ -27,6 +26,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.CustomMenu
             throw new NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<LocationSelectCustomMenuEventMessage>
-    }
+            }
 }

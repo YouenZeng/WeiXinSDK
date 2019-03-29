@@ -34,14 +34,11 @@ namespace Rabbit.WeiXin.MP.Api.GroupMessage
     /// </summary>
     public sealed class GroupMessageService : IGroupMessageService
     {
-        #region Field
-
+        
         private readonly AccountModel _accountModel;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的群发服务实例。
         /// </summary>
@@ -51,10 +48,8 @@ namespace Rabbit.WeiXin.MP.Api.GroupMessage
             _accountModel = accountModel;
         }
 
-        #endregion Constructor
-
-        #region Implementation of IGroupMessageService
-
+        
+        
         /// <summary>
         /// 发送群组消息。
         /// </summary>
@@ -94,10 +89,8 @@ namespace Rabbit.WeiXin.MP.Api.GroupMessage
             });
         }
 
-        #endregion Implementation of IGroupMessageService
-
-        #region Private Method
-
+        
+        
         private GroupSendResult SendMessage(GroupMessage message, Action<JObject> action)
         {
             var url = "https://api.weixin.qq.com/cgi-bin/message/mass/sendall?access_token=" + _accountModel.GetAccessToken();
@@ -156,11 +149,9 @@ namespace Rabbit.WeiXin.MP.Api.GroupMessage
             return JsonConvert.DeserializeObject<GroupSendResult>(content);
         }
 
-        #endregion Private Method
-    }
+            }
 
-    #region Help Class
-
+    
     /// <summary>
     /// 群组消息发送结果。
     /// </summary>
@@ -270,8 +261,7 @@ namespace Rabbit.WeiXin.MP.Api.GroupMessage
         [Required, JsonProperty("media_id")]
         public string MediaId { get; set; }
 
-        #region Overrides of GroupMessage
-
+        
         /// <summary>
         /// 群组消息类型。
         /// </summary>
@@ -280,8 +270,7 @@ namespace Rabbit.WeiXin.MP.Api.GroupMessage
             get { return GroupMessageType.News; }
         }
 
-        #endregion Overrides of GroupMessage
-    }
+            }
 
     /// <summary>
     /// 群组文本消息。
@@ -310,8 +299,7 @@ namespace Rabbit.WeiXin.MP.Api.GroupMessage
         [Required, JsonProperty("content")]
         public string Content { get; set; }
 
-        #region Overrides of GroupMessage
-
+        
         /// <summary>
         /// 群组消息类型。
         /// </summary>
@@ -320,8 +308,7 @@ namespace Rabbit.WeiXin.MP.Api.GroupMessage
             get { return GroupMessageType.Text; }
         }
 
-        #endregion Overrides of GroupMessage
-    }
+            }
 
     /// <summary>
     /// 群组语音消息。
@@ -350,8 +337,7 @@ namespace Rabbit.WeiXin.MP.Api.GroupMessage
         [Required, JsonProperty("media_id")]
         public string MediaId { get; set; }
 
-        #region Overrides of GroupMessage
-
+        
         /// <summary>
         /// 群组消息类型。
         /// </summary>
@@ -360,8 +346,7 @@ namespace Rabbit.WeiXin.MP.Api.GroupMessage
             get { return GroupMessageType.Voice; }
         }
 
-        #endregion Overrides of GroupMessage
-    }
+            }
 
     /// <summary>
     /// 群组图文消息。
@@ -390,8 +375,7 @@ namespace Rabbit.WeiXin.MP.Api.GroupMessage
         [Required, JsonProperty("media_id")]
         public string MediaId { get; set; }
 
-        #region Overrides of GroupMessage
-
+        
         /// <summary>
         /// 群组消息类型。
         /// </summary>
@@ -400,8 +384,7 @@ namespace Rabbit.WeiXin.MP.Api.GroupMessage
             get { return GroupMessageType.Image; }
         }
 
-        #endregion Overrides of GroupMessage
-    }
+            }
 
     /// <summary>
     /// 群组视频消息。
@@ -446,8 +429,7 @@ namespace Rabbit.WeiXin.MP.Api.GroupMessage
         [Required, JsonProperty("media_id")]
         public string MediaId { get; set; }
 
-        #region Overrides of GroupMessage
-
+        
         /// <summary>
         /// 群组消息类型。
         /// </summary>
@@ -456,8 +438,7 @@ namespace Rabbit.WeiXin.MP.Api.GroupMessage
             get { return GroupMessageType.Video; }
         }
 
-        #endregion Overrides of GroupMessage
-    }
+            }
 
     /// <summary>
     /// 群组卡券消息。
@@ -486,8 +467,7 @@ namespace Rabbit.WeiXin.MP.Api.GroupMessage
         [Required, JsonProperty("card_id")]
         public string CardId { get; set; }
 
-        #region Overrides of GroupMessage
-
+        
         /// <summary>
         /// 群组消息类型。
         /// </summary>
@@ -496,8 +476,6 @@ namespace Rabbit.WeiXin.MP.Api.GroupMessage
             get { return GroupMessageType.Card; }
         }
 
-        #endregion Overrides of GroupMessage
-    }
+            }
 
-    #endregion Help Class
-}
+    }

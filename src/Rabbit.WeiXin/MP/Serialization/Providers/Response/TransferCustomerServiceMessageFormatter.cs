@@ -8,8 +8,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Response
 {
     internal sealed class TransferCustomerServiceMessageFormatter : XmlMessageFormatterBase<ResponseMessageTransferCustomerService>
     {
-        #region Overrides of XmlMessageFormatterBase<ResponseMessageTransferCustomerService>
-
+        
         public override ResponseMessageTransferCustomerService Deserialize(XContainer container)
         {
             throw new NotImplementedException();
@@ -30,6 +29,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Response
             return builder.ToString();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<ResponseMessageTransferCustomerService>
-    }
+            }
 }

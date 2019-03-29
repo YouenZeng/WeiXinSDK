@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Response
 {
     internal sealed class NewsMessageFormatter : XmlMessageFormatterBase<ResponseMessageNews>
     {
-        #region Overrides of XmlMessageFormatterBase<ResponseMessageNews>
-
+        
         public override ResponseMessageNews Deserialize(XContainer container)
         {
             throw new NotImplementedException();
@@ -33,6 +32,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Response
             });
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<ResponseMessageNews>
-    }
+            }
 }

@@ -14,14 +14,11 @@ namespace Rabbit.WeiXin.MP.Api.Card
     /// </summary>
     public sealed class CardService : ICardService
     {
-        #region Field
-
+        
         private readonly AccountModel _accountModel;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个卡券服务。
         /// </summary>
@@ -31,10 +28,8 @@ namespace Rabbit.WeiXin.MP.Api.Card
             _accountModel = accountModel;
         }
 
-        #endregion Constructor
-
-        #region Implementation of ICardService
-
+        
+        
         /// <summary>
         /// 上传卡券Logo。
         /// </summary>
@@ -475,10 +470,8 @@ namespace Rabbit.WeiXin.MP.Api.Card
             };
         }
 
-        #endregion Implementation of ICardService
-
-        #region Private Method
-
+        
+        
         private static CardBaseInfoBase.UseTimeInfo GetUseTime(JToken token)
         {
             var type = token.Value<string>("type");
@@ -603,6 +596,5 @@ namespace Rabbit.WeiXin.MP.Api.Card
             throw new NotSupportedException("不支持的卡券类型：" + type);
         }
 
-        #endregion Private Method
-    }
+            }
 }

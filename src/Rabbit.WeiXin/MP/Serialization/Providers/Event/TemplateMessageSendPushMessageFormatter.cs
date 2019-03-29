@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event
 {
     internal sealed class TemplateMessageSendPushMessageFormatter : XmlMessageFormatterBase<TemplateMessageSendPushMessage>
     {
-        #region Overrides of XmlMessageFormatterBase<TemplateMessageSendPushMessage>
-
+        
         public override TemplateMessageSendPushMessage Deserialize(XContainer container)
         {
             var model = SetBaseInfo(container, new TemplateMessageSendPushMessage());
@@ -39,6 +38,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event
             throw new NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<TemplateMessageSendPushMessage>
-    }
+            }
 }

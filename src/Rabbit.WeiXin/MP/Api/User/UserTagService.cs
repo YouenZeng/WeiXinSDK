@@ -72,14 +72,11 @@ namespace Rabbit.WeiXin.MP.Api.User
     /// </summary>
     public class UserTagService : IUserTagService
     {
-        #region Field
-
+        
         private readonly AccountModel _accountModel;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的用户服务实例。
         /// </summary>
@@ -89,10 +86,8 @@ namespace Rabbit.WeiXin.MP.Api.User
             _accountModel = accountModel;
         }
 
-        #endregion Constructor
-
-        #region Implementation of UserTagService
-
+        
+        
         /// <summary>
         /// 创建标签
         /// </summary>
@@ -182,11 +177,9 @@ namespace Rabbit.WeiXin.MP.Api.User
             return result?.TagIds ?? new List<int>(0);
         }
 
-        #endregion Implementation of UserTagService
-    }
+            }
 
-    #region Help Class
-
+    
     /// <summary>
     /// 标签序列化包装对象
     /// </summary>
@@ -280,5 +273,4 @@ namespace Rabbit.WeiXin.MP.Api.User
         public List<int> TagIds { get; set; }
     }
 
-    #endregion Help Class
-}
+    }

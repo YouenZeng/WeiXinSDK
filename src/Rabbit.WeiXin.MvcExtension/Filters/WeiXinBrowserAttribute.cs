@@ -17,23 +17,18 @@ namespace Rabbit.WeiXin.MvcExtension.Filters
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
     public class WeiXinBrowserAttribute : ActionFilterAttribute
     {
-        #region Field
-
+        
         private readonly string _message;
 
-        #endregion Field
-
-        #region Property
-
+        
+        
         /// <summary>
         /// 如果不是使用微信浏览器请求则跳转到该地址（如果设置了该地址则优先使用跳转地址）。
         /// </summary>
         public string RedirectUrl { get; set; }
 
-        #endregion Property
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新捣微信浏览器过滤器。
         /// </summary>
@@ -43,10 +38,8 @@ namespace Rabbit.WeiXin.MvcExtension.Filters
             _message = message;
         }
 
-        #endregion Constructor
-
-        #region Overrides of ActionFilterAttribute
-
+        
+        
         /// <summary>
         /// Called by the ASP.NET MVC framework before the action method executes.
         /// </summary>
@@ -71,6 +64,5 @@ namespace Rabbit.WeiXin.MvcExtension.Filters
             }
         }
 
-        #endregion Overrides of ActionFilterAttribute
-    }
+            }
 }

@@ -9,24 +9,19 @@ namespace Rabbit.WeiXin.Tests
 {
     public class UserTagServiceTest : ApiTestBase
     {
-        #region Field
-
+        
         private readonly IUserTagService _userTagService;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         public UserTagServiceTest()
         {
             _userTagService = new UserTagService(AccountModel);
         }
 
-        #endregion Constructor
+        
 
-
-        #region Test Method
-
+        
         [Fact]
         public void CreateTagTest()
         {
@@ -104,6 +99,5 @@ namespace Rabbit.WeiXin.Tests
             Assert.NotEqual(result.Count, 0);
         }
 
-        #endregion Test Method
-    }
+            }
 }

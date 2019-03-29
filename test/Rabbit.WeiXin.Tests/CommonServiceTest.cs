@@ -8,8 +8,7 @@ namespace Rabbit.WeiXin.Tests
 {
     public class CommonServiceTest : ApiTestBase
     {
-        #region Test Method
-
+        
         [Fact]
         public void GetAccessTokenTest()
         {
@@ -61,6 +60,5 @@ namespace Rabbit.WeiXin.Tests
             Assert.True(list.Length > 0);
         }
 
-        #endregion Test Method
-    }
+            }
 }

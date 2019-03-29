@@ -5,8 +5,7 @@
     /// </summary>
     public sealed class QrSubscribeEventKeyMessage : QrEventKeyMessageBase
     {
-        #region Overrides of EventMessageBase
-
+        
         /// <summary>
         /// 事件类型。
         /// </summary>
@@ -20,6 +19,5 @@
         /// </summary>
         public string SeceneValue => EventKey.Substring(8);
 
-        #endregion Overrides of EventMessageBase
-    }
+            }
 }

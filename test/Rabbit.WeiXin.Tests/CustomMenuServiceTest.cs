@@ -8,23 +8,18 @@ namespace Rabbit.WeiXin.Tests
 {
     public class CustomMenuServiceTest : ApiTestBase
     {
-        #region Field
-
+        
         private readonly ICustomMenuService _customMenuService;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         public CustomMenuServiceTest()
         {
             _customMenuService = new CustomMenuService(AccountModel);
         }
 
-        #endregion Constructor
-
-        #region Test Method
-
+        
+        
         [Fact]
         public void SetTest()
         {
@@ -130,6 +125,5 @@ namespace Rabbit.WeiXin.Tests
                 Assert.True(false);
         }
 
-        #endregion Test Method
-    }
+            }
 }

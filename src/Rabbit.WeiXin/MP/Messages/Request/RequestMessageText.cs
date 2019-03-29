@@ -10,8 +10,7 @@
         /// </summary>
         public string Content { get; set; }
 
-        #region Overrides of MessageBase
-
+        
         /// <summary>
         /// 消息类型。
         /// </summary>
@@ -20,6 +19,5 @@
             get { return RequestMessageType.Text; }
         }
 
-        #endregion Overrides of MessageBase
-    }
+            }
 }

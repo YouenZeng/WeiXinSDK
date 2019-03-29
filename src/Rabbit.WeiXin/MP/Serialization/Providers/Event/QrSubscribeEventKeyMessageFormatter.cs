@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event
 {
     internal sealed class QrSubscribeEventKeyMessageFormatter : XmlMessageFormatterBase<QrSubscribeEventKeyMessage>
     {
-        #region Overrides of XmlMessageFormatterBase<QrSubscribeEventKeyMessage>
-
+        
         public override QrSubscribeEventKeyMessage Deserialize(XContainer container)
         {
             return SetBaseInfo(container, new QrSubscribeEventKeyMessage
@@ -22,6 +21,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event
             throw new NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<QrSubscribeEventKeyMessage>
-    }
+            }
 }

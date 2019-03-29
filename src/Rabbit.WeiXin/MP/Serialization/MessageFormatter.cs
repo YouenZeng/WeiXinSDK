@@ -55,8 +55,7 @@ namespace Rabbit.WeiXin.MP.Serialization
     /// <typeparam name="T">消息类型。</typeparam>
     internal abstract class XmlMessageFormatterBase<T> : IMessageFormatter<T> where T : class, IMessageBase
     {
-        #region Implementation of IMessageFormatter<T>
-
+        
         /// <summary>
         /// 反序列化。
         /// </summary>
@@ -71,10 +70,8 @@ namespace Rabbit.WeiXin.MP.Serialization
         /// <returns>xml内容。</returns>
         public abstract string Serialize(T graph);
 
-        #endregion Implementation of IMessageFormatter<T>
-
-        #region Implementation of IMessageFormatter
-
+        
+        
         /// <summary>
         /// 反序列化。
         /// </summary>
@@ -95,10 +92,8 @@ namespace Rabbit.WeiXin.MP.Serialization
             return Serialize(graph as T);
         }
 
-        #endregion Implementation of IMessageFormatter
-
-        #region Protected Method
-
+        
+        
         protected static string GetValueOrDefault(XContainer container, string name, string defaultValue)
         {
             var ele = GetElement(container, name);
@@ -118,8 +113,7 @@ namespace Rabbit.WeiXin.MP.Serialization
         {
             var value = GetValue(container, name);
 
-            #region By String
-
+            
             if (value.Length > 1)
             {
                 switch (value.ToLower())
@@ -135,10 +129,8 @@ namespace Rabbit.WeiXin.MP.Serialization
                 }
             }
 
-            #endregion By String
-
-            #region By Number
-
+            
+            
             int number;
             if (!int.TryParse(value, out number))
                 throw new ArgumentException(string.Format("无法将 {0} 转换为Boolean类型。", value));
@@ -154,8 +146,7 @@ namespace Rabbit.WeiXin.MP.Serialization
                     throw new ArgumentException(string.Format("无法将 {0} 转换为Boolean类型。", value));
             }
 
-            #endregion By Number
-        }
+                    }
 
         protected static uint GetUInt(XContainer container, string name)
         {
@@ -270,10 +261,8 @@ namespace Rabbit.WeiXin.MP.Serialization
             return builder.ToString();
         }
 
-        #endregion Protected Method
-
-        #region Private Method
-
+        
+        
         private static XElement GetElement(XContainer container, string name)
         {
             //首先直接得到元素，如果为null则忽略大小写重新尝试获取（之所以这么做是因为直接获取元素性能比后者高）。
@@ -281,6 +270,5 @@ namespace Rabbit.WeiXin.MP.Serialization
                       container.Elements().FirstOrDefault(i => i.Name.LocalName.Equals(name, StringComparison.OrdinalIgnoreCase));
         }
 
-        #endregion Private Method
-    }
+            }
 }

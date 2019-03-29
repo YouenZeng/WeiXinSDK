@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.CustomService
 {
     internal sealed class SwitchSessionMessageFormatter : XmlMessageFormatterBase<SwitchSessionMessage>
     {
-        #region Overrides of XmlMessageFormatterBase<SwitchSessionNotificationMessage>
-
+        
         public override SwitchSessionMessage Deserialize(XContainer container)
         {
             return SetBaseInfo(container, new SwitchSessionMessage
@@ -22,6 +21,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.CustomService
             throw new NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<SwitchSessionNotificationMessage>
-    }
+            }
 }

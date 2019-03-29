@@ -5,15 +5,13 @@
     /// </summary>
     public sealed class CardEventUserGetMessage : CardEventBase
     {
-        #region Overrides of EventMessageBase
-
+        
         /// <summary>
         /// 事件类型。
         /// </summary>
         public override EventType EventType { get { return EventType.Card_User_Get; } }
 
-        #endregion Overrides of EventMessageBase
-
+        
         /// <summary>
         /// 是否为转赠。
         /// </summary>

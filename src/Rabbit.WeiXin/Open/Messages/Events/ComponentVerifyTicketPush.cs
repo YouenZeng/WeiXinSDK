@@ -50,8 +50,7 @@ namespace Rabbit.WeiXin.Open.Messages.Events
         /// </summary>
         public string ComponentVerifyTicket { get; set; }
 
-        #region Private Method
-
+        
         private void Init(XContainer container)
         {
             AppId = container.Element("AppId").Value;
@@ -59,6 +58,5 @@ namespace Rabbit.WeiXin.Open.Messages.Events
             ComponentVerifyTicket = container.Element("ComponentVerifyTicket").Value;
         }
 
-        #endregion Private Method
-    }
+            }
 }

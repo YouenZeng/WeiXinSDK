@@ -5,8 +5,7 @@
     /// </summary>
     public class ResponseMessageTransferCustomerService : ResponseMessageBase
     {
-        #region Overrides of ResponseMessageBase
-
+        
         /// <summary>
         /// 消息类型。
         /// </summary>
@@ -15,6 +14,5 @@
             get { return ResponseMessageType.TransferCustomerServic; }
         }
 
-        #endregion Overrides of ResponseMessageBase
-    }
+            }
 }

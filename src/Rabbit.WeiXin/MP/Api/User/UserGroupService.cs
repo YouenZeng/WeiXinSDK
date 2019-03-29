@@ -64,14 +64,11 @@ namespace Rabbit.WeiXin.MP.Api.User
     /// </summary>
     public sealed class UserGroupService : IUserGroupService
     {
-        #region Field
-
+        
         private readonly AccountModel _accountModel;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的用户群组服务实例。
         /// </summary>
@@ -81,10 +78,8 @@ namespace Rabbit.WeiXin.MP.Api.User
             _accountModel = accountModel;
         }
 
-        #endregion Constructor
-
-        #region Implementation of IUserGroupService
-
+        
+        
         /// <summary>
         /// 创建分组。
         /// </summary>
@@ -180,11 +175,9 @@ namespace Rabbit.WeiXin.MP.Api.User
             WeiXinHttpHelper.Post(url, new { group = new { id = groupId } });
         }
 
-        #endregion Implementation of IUserGroupService
-    }
+            }
 
-    #region Help Class
-
+    
     /// <summary>
     /// 创建分组结果模型。
     /// </summary>
@@ -235,5 +228,4 @@ namespace Rabbit.WeiXin.MP.Api.User
         public uint UserCount { get; set; }
     }
 
-    #endregion Help Class
-}
+    }

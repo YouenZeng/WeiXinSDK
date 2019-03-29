@@ -8,25 +8,20 @@ namespace Rabbit.WeiXin.Tests
     
     public class GroupMessageServiceTest : ApiTestBase
     {
-        #region Field
-
+        
         private readonly IGroupMessageService _groupMessageService;
         private readonly IForeverMaterialService _foreverMaterialService;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         public GroupMessageServiceTest()
         {
             _groupMessageService = new GroupMessageService(AccountModel);
             _foreverMaterialService = new ForeverMaterialService(AccountModel);
         }
 
-        #endregion Constructor
-
-        #region Test Method
-
+        
+        
         [Fact]
         public void SendTextByGroupTest()
         {
@@ -99,6 +94,5 @@ namespace Rabbit.WeiXin.Tests
             _groupMessageService.SendByUsers(new[] { OpenId }, new GroupMessageText("content"));
         }
 
-        #endregion Test Method
-    }
+            }
 }

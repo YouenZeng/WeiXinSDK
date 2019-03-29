@@ -16,12 +16,10 @@ namespace Rabbit.WeiXin.Tests
     
     public class RequestMessageFormatter
     {
-        #region Field
-
+        
         private readonly IRequestMessageFactory _requestMessageFactory = DefaultDependencyResolver.Instance.GetService<IRequestMessageFactory>();
 
-        #endregion Field
-
+        
         [Fact]
         public void TextMessageTest()
         {
@@ -193,8 +191,7 @@ namespace Rabbit.WeiXin.Tests
             Assert.Equal(new Uri("http://www.chunsun.cc/"), model.Url);
         }
 
-        #region Event
-
+        
         [Fact]
         public void SubscribeMessageTest()
         {
@@ -334,8 +331,7 @@ namespace Rabbit.WeiXin.Tests
             Assert.Equal((ulong)5, model.ErrorCount);
         }
 
-        #region CustomMenu
-
+        
         [Fact]
         public void CustomMenuClickMessageTest()
         {
@@ -552,10 +548,8 @@ namespace Rabbit.WeiXin.Tests
             Assert.Equal("test", model.Poiname);
         }
 
-        #endregion CustomMenu
-
-        #region CustomService
-
+        
+        
         [Fact]
         public void CreateSessionMessageTest()
         {
@@ -624,10 +618,8 @@ namespace Rabbit.WeiXin.Tests
             Assert.Equal("test2@test", model.ToAccount);
         }
 
-        #endregion CustomService
-
-        #region Card
-
+        
+        
         [Fact]
         public void CardEventPassCheckMessageTest()
         {
@@ -794,10 +786,8 @@ namespace Rabbit.WeiXin.Tests
             Assert.Equal("12312312", model.UserCardCode);
         }
 
-        #endregion Card
-
-        #region WiFi
-
+        
+        
         [Fact]
         public void WiFiConnectedMessageTest()
         {
@@ -825,10 +815,8 @@ namespace Rabbit.WeiXin.Tests
             Assert.Equal("DeviceNo", model.DeviceNo);
         }
 
-        #endregion WiFi
-
-        #region Shakearound
-
+        
+        
         [Fact]
         public void ShakearoundUserShakeMessageTest()
         {
@@ -886,8 +874,6 @@ namespace Rabbit.WeiXin.Tests
             Assert.Equal(15.013, model.AroundBeacons[1].Distance);
         }
 
-        #endregion Shakearound
-
-        #endregion Event
-    }
+        
+            }
 }

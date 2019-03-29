@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.Card
 {
     internal sealed class CardEventPassCheckMessageFormatter : XmlMessageFormatterBase<CardEventPassCheckMessage>
     {
-        #region Overrides of XmlMessageFormatterBase<CardEventPassCheckMessage>
-
+        
         /// <summary>
         /// 反序列化。
         /// </summary>
@@ -31,6 +30,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.Card
             throw new NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<CardEventPassCheckMessage>
-    }
+            }
 }

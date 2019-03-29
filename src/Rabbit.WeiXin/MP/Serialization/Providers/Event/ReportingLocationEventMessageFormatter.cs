@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event
 {
     internal sealed class ReportingLocationEventMessageFormatter : XmlMessageFormatterBase<ReportingLocationEventMessage>
     {
-        #region Overrides of XmlMessageFormatterBase<ReportingLocationEventMessage>
-
+        
         public override ReportingLocationEventMessage Deserialize(XContainer container)
         {
             return SetBaseInfo(container, new ReportingLocationEventMessage
@@ -23,6 +22,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event
             throw new NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<ReportingLocationEventMessage>
-    }
+            }
 }

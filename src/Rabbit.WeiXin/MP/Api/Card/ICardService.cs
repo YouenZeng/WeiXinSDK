@@ -156,8 +156,7 @@ namespace Rabbit.WeiXin.MP.Api.Card
         }
     }
 
-    #region Help Class
-
+    
     /// <summary>
     /// 创建领取卡券二维码结果。
     /// </summary>
@@ -179,8 +178,7 @@ namespace Rabbit.WeiXin.MP.Api.Card
     /// </summary>
     public sealed class CreateCardQrCodeModel
     {
-        #region Constructor
-
+        
         /// <summary>
         /// 创建一个新的创建领取卡券二维码模型。
         /// </summary>
@@ -190,8 +188,7 @@ namespace Rabbit.WeiXin.MP.Api.Card
             CardId = cardId;
         }
 
-        #endregion Constructor
-
+        
         /// <summary>
         /// 卡券ID。
         /// </summary>
@@ -568,8 +565,7 @@ namespace Rabbit.WeiXin.MP.Api.Card
             [JsonProperty("end_timestamp")]
             internal ulong EndTimestamp { get; set; }
 
-            #region Overrides of UseTimeInfo
-
+            
             /// <summary>
             /// 使用时间的类型。
             /// </summary>
@@ -579,8 +575,7 @@ namespace Rabbit.WeiXin.MP.Api.Card
                 get { return CardUseTimeType.FixedTimeSpan; }
             }
 
-            #endregion Overrides of UseTimeInfo
-        }
+                    }
 
         /// <summary>
         /// 固定时常的使用时间信息。
@@ -599,8 +594,7 @@ namespace Rabbit.WeiXin.MP.Api.Card
             [JsonProperty("fixed_begin_term")]
             public uint FixedBeginTerm { get; set; }
 
-            #region Overrides of UseTimeInfo
-
+            
             /// <summary>
             /// 使用时间的类型。
             /// </summary>
@@ -610,8 +604,7 @@ namespace Rabbit.WeiXin.MP.Api.Card
                 get { return CardUseTimeType.FixedLong; }
             }
 
-            #endregion Overrides of UseTimeInfo
-        }
+                    }
 
         /// <summary>
         /// 卡券的商户logo，建议像素为300*300。
@@ -864,8 +857,7 @@ namespace Rabbit.WeiXin.MP.Api.Card
         [Required, StringLength(24), JsonProperty("deal_detail")]
         public string Detail { get; set; }
 
-        #region Overrides of CardModel
-
+        
         /// <summary>
         /// 卡券类型。
         /// </summary>
@@ -875,16 +867,14 @@ namespace Rabbit.WeiXin.MP.Api.Card
             get { return CardType.Group; }
         }
 
-        #endregion Overrides of CardModel
-    }
+            }
 
     /// <summary>
     /// 代金券。
     /// </summary>
     public sealed class CashCardModel : CardModel
     {
-        #region Overrides of CardModel
-
+        
         /// <summary>
         /// 卡券类型。
         /// </summary>
@@ -894,8 +884,7 @@ namespace Rabbit.WeiXin.MP.Api.Card
             get { return CardType.Cash; }
         }
 
-        #endregion Overrides of CardModel
-
+        
         /// <summary>
         /// 表示起用金额。（单位为分）
         /// </summary>
@@ -914,8 +903,7 @@ namespace Rabbit.WeiXin.MP.Api.Card
     /// </summary>
     public sealed class DiscountCardModel : CardModel
     {
-        #region Overrides of CardModel
-
+        
         /// <summary>
         /// 卡券类型。
         /// </summary>
@@ -925,8 +913,7 @@ namespace Rabbit.WeiXin.MP.Api.Card
             get { return CardType.Discount; }
         }
 
-        #endregion Overrides of CardModel
-
+        
         /// <summary>
         /// 折扣券专用，表示打折额度（百分比）。填30就是七折。
         /// </summary>
@@ -939,8 +926,7 @@ namespace Rabbit.WeiXin.MP.Api.Card
     /// </summary>
     public sealed class GiftCardModel : CardModel
     {
-        #region Overrides of CardModel
-
+        
         /// <summary>
         /// 卡券类型。
         /// </summary>
@@ -950,8 +936,7 @@ namespace Rabbit.WeiXin.MP.Api.Card
             get { return CardType.Gift; }
         }
 
-        #endregion Overrides of CardModel
-
+        
         /// <summary>
         /// 填写礼品的名称。
         /// </summary>
@@ -964,8 +949,7 @@ namespace Rabbit.WeiXin.MP.Api.Card
     /// </summary>
     public sealed class CouponCardModel : CardModel
     {
-        #region Overrides of CardModel
-
+        
         /// <summary>
         /// 卡券类型。
         /// </summary>
@@ -975,8 +959,7 @@ namespace Rabbit.WeiXin.MP.Api.Card
             get { return CardType.Coupon; }
         }
 
-        #endregion Overrides of CardModel
-
+        
         /// <summary>
         /// 填写优惠详情。
         /// </summary>
@@ -984,5 +967,4 @@ namespace Rabbit.WeiXin.MP.Api.Card
         public string Detail { get; set; }
     }
 
-    #endregion Help Class
-}
+    }

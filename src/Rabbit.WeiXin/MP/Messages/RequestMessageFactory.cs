@@ -27,23 +27,18 @@ namespace Rabbit.WeiXin.MP.Messages
     /// </summary>
     internal sealed class RequestMessageFactory : IRequestMessageFactory
     {
-        #region Field
-
+        
         private readonly IMessageFormatterFactory _messageFormatterFactory;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         public RequestMessageFactory(IMessageFormatterFactory messageFormatterFactory)
         {
             _messageFormatterFactory = messageFormatterFactory;
         }
 
-        #endregion Constructor
-
-        #region Implementation of IRequestMessageFactory
-
+        
+        
         /// <summary>
         /// 创建请求消息实例。
         /// </summary>
@@ -61,10 +56,8 @@ namespace Rabbit.WeiXin.MP.Messages
             return (IRequestMessageBase)_messageFormatterFactory.GetFormatter(requestMessageType).Deserialize(root);
         }
 
-        #endregion Implementation of IRequestMessageFactory
-
-        #region Private Method
-
+        
+        
         private static RequestMessageType GetRequestMessageType(XContainer container)
         {
             return GetType<RequestMessageType>(container, "MsgType");
@@ -81,8 +74,7 @@ namespace Rabbit.WeiXin.MP.Messages
             return EnumParseCacheHelper.Parse<T>(type);
         }
 
-        #endregion Private Method
-    }
+            }
 
     /// <summary>
     /// 请求消息工厂扩展方法。

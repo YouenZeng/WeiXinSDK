@@ -19,8 +19,7 @@ namespace Rabbit.WeiXin.Handlers.Impl
         {
         }
 
-        #region Overrides of HandlerMiddleware
-
+        
         /// <summary>
         /// µ÷ÓÃ¡£
         /// </summary>
@@ -34,8 +33,7 @@ namespace Rabbit.WeiXin.Handlers.Impl
             var content = context.Content;
             var parameters = context.GetRequestParameters();
 
-            #region Decrypt
-
+            
             if (parameters.ContainsKey("encrypt_type"))
             {
                 var nonce = parameters["nonce"];
@@ -51,13 +49,11 @@ namespace Rabbit.WeiXin.Handlers.Impl
                 wxBizMsgCrypt.DecryptMsg(signature, timestamp, nonce, content, ref content);
             }
 
-            #endregion Decrypt
-
+            
             context.SetRequestMessage(requestMessageFactory.CreateRequestMessage(content));
 
             return Next.Invoke(context);
         }
 
-        #endregion Overrides of HandlerMiddleware
-    }
+            }
 }

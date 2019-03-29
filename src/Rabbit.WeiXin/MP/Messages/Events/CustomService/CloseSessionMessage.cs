@@ -10,8 +10,7 @@
         /// </summary>
         public string Account { get; set; }
 
-        #region Overrides of EventMessageBase
-
+        
         /// <summary>
         /// 事件类型。
         /// </summary>
@@ -20,6 +19,5 @@
             get { return EventType.KF_Close_Session; }
         }
 
-        #endregion Overrides of EventMessageBase
-    }
+            }
 }

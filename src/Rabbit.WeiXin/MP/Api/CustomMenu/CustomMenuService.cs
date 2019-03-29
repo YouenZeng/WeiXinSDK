@@ -75,8 +75,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomMenu
     /// </summary>
     public sealed class CustomMenuService : ICustomMenuService
     {
-        #region Field
-
+        
         private readonly AccountModel _accountModel;
 
         private static readonly IDictionary<CustomMenuType, string> CustomMenuTypeMappings = new Dictionary<CustomMenuType, string>
@@ -93,10 +92,8 @@ namespace Rabbit.WeiXin.MP.Api.CustomMenu
             {CustomMenuType.ViewLimited, "view_limited"}
         };
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的自定义菜单服务实例。
         /// </summary>
@@ -106,10 +103,8 @@ namespace Rabbit.WeiXin.MP.Api.CustomMenu
             _accountModel = accountModel;
         }
 
-        #endregion Constructor
-
-        #region Implementation of ICustomMenuService
-
+        
+        
         /// <summary>
         /// 设置自定义菜单。
         /// </summary>
@@ -216,10 +211,8 @@ namespace Rabbit.WeiXin.MP.Api.CustomMenu
             WeiXinHttpHelper.PostString(url, new { menuid = menuId });
         }
 
-        #endregion Implementation of ICustomMenuService
-
-        #region Private Method
-
+        
+        
         private static CustomMenuModel GetByJson(string content)
         {
             var data = JObject.Parse(content);
@@ -348,11 +341,9 @@ namespace Rabbit.WeiXin.MP.Api.CustomMenu
             }
         }
 
-        #endregion Private Method
-    }
+            }
 
-    #region Help Class
-
+    
     /// <summary>
     /// 自定义菜单模型。
     /// </summary>
@@ -428,8 +419,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomMenu
     /// </summary>
     public sealed class CustomMenuTopButton : CustomMenuButtonBase
     {
-        #region Constructor
-
+        
         /// <summary>
         /// 初始化一个新的自定义菜单。
         /// </summary>
@@ -441,15 +431,13 @@ namespace Rabbit.WeiXin.MP.Api.CustomMenu
         {
         }
 
-        #endregion Constructor
-
+        
         /// <summary>
         /// 二级菜单数组，个数应为1~5个
         /// </summary>
         public CustomMenuButton[] Childs { get; private set; }
 
-        #region Public Method
-
+        
         /// <summary>
         /// 清空所有子级菜单。
         /// </summary>
@@ -475,16 +463,14 @@ namespace Rabbit.WeiXin.MP.Api.CustomMenu
             Childs = count > maxCount ? result.Skip(count - maxCount).Take(maxCount).ToArray() : result.ToArray();
         }
 
-        #endregion Public Method
-    }
+            }
 
     /// <summary>
     /// 一个基础的自定义菜单按钮。
     /// </summary>
     public abstract class CustomMenuButton : CustomMenuButtonBase
     {
-        #region Constructor
-
+        
         /// <summary>
         /// 初始化一个新的自定义菜单。
         /// </summary>
@@ -496,8 +482,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomMenu
         {
         }
 
-        #endregion Constructor
-
+        
         /// <summary>
         /// 菜单的响应动作类型
         /// </summary>
@@ -509,8 +494,7 @@ namespace Rabbit.WeiXin.MP.Api.CustomMenu
     /// </summary>
     public sealed class CustomMenuKeyButton : CustomMenuButton
     {
-        #region Constructor
-
+        
         /// <summary>
         /// 初始化一个新的带有事件Key的自定义菜单按钮。
         /// </summary>
@@ -535,31 +519,27 @@ namespace Rabbit.WeiXin.MP.Api.CustomMenu
             Key = key.NotEmptyOrWhiteSpace("key");
         }
 
-        #endregion Constructor
-
+        
         /// <summary>
         /// 菜单KEY值，用于消息接口推送，不超过128字节
         /// </summary>
         [Required, StringLength(128)]
         public string Key { get; set; }
 
-        #region Overrides of CustomMenuButton
-
+        
         /// <summary>
         /// 菜单的响应动作类型
         /// </summary>
         public override CustomMenuType Type { get; }
 
-        #endregion Overrides of CustomMenuButton
-    }
+            }
 
     /// <summary>
     /// 跳转行为的自定义菜单按钮。
     /// </summary>
     public sealed class CustomMenuViewButton : CustomMenuButton
     {
-        #region Constructor
-
+        
         /// <summary>
         /// 初始化一个新的跳转行为的自定义菜单按钮。
         /// </summary>
@@ -578,31 +558,27 @@ namespace Rabbit.WeiXin.MP.Api.CustomMenu
                 throw new ArgumentException(url + " 不是一个有效的url地址。", nameof(url));
         }
 
-        #endregion Constructor
-
+        
         /// <summary>
         /// 网页链接，用户点击菜单可打开链接，不超过256字节
         /// </summary>
         [Required, StringLength(256)]
         public string Url { get; set; }
 
-        #region Overrides of CustomMenuButton
-
+        
         /// <summary>
         /// 菜单的响应动作类型
         /// </summary>
         public override CustomMenuType Type => CustomMenuType.View;
 
-        #endregion Overrides of CustomMenuButton
-    }
+            }
 
     /// <summary>
     /// 使用永久素材的自定义菜单按钮。
     /// </summary>
     public sealed class CustomMenuMediaButton : CustomMenuButton
     {
-        #region Constructor
-
+        
         /// <summary>
         /// 初始化一个新的使用永久素材的自定义菜单按钮。
         /// </summary>
@@ -629,23 +605,20 @@ namespace Rabbit.WeiXin.MP.Api.CustomMenu
             MediaId = mediaId.NotEmptyOrWhiteSpace("mediaId");
         }
 
-        #endregion Constructor
-
+        
         /// <summary>
         /// 调用新增永久素材接口返回的合法media_id
         /// </summary>
         [Required]
         public string MediaId { get; set; }
 
-        #region Overrides of CustomMenuButton
-
+        
         /// <summary>
         /// 菜单的响应动作类型
         /// </summary>
         public override CustomMenuType Type { get; }
 
-        #endregion Overrides of CustomMenuButton
-    }
+            }
 
     /// <summary>
     /// 自定义菜单类型。
@@ -733,5 +706,4 @@ namespace Rabbit.WeiXin.MP.Api.CustomMenu
         ViewLimited = 9
     }
 
-    #endregion Help Class
-}
+    }

@@ -4,8 +4,7 @@ namespace Rabbit.WeiXin.Tests
 {
     public class ApiTestBase
     {
-        #region Field
-
+        
         //请自行配置。
         private const string AppId = "xxxxxxxx";
 
@@ -19,10 +18,8 @@ namespace Rabbit.WeiXin.Tests
 
         protected AccountModel AccountModel;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         public ApiTestBase()
         {
             AccountModel = new AccountModel
@@ -34,15 +31,12 @@ namespace Rabbit.WeiXin.Tests
             CommonService = new CommonService(AccountModel);
         }
 
-        #endregion Constructor
-
-        #region Protected Method
-
+        
+        
         protected string GetAccessToken()
         {
             return CommonService.GetAccessToken().AccessToken;
         }
 
-        #endregion Protected Method
-    }
+            }
 }

@@ -8,23 +8,18 @@ namespace Rabbit.WeiXin.Tests
     
     public class TemporaryMaterialServiceTest : ApiTestBase
     {
-        #region Field
-
+        
         private readonly ITemporaryMaterialService _materialService;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         public TemporaryMaterialServiceTest()
         {
             _materialService = new TemporaryMaterialService(AccountModel);
         }
 
-        #endregion Constructor
-
-        #region Test Method
-
+        
+        
         [Fact]
         public void AddJpgTemporaryTest()
         {
@@ -72,6 +67,5 @@ namespace Rabbit.WeiXin.Tests
             Assert.True(model.Data.Length > 0);
         }
 
-        #endregion Test Method
-    }
+            }
 }

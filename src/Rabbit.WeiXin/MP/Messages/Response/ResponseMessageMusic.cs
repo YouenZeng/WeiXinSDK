@@ -9,8 +9,7 @@ namespace Rabbit.WeiXin.MP.Messages.Response
     /// </summary>
     public sealed class ResponseMessageMusic : ResponseMessageBase
     {
-        #region Constructor
-
+        
         /// <summary>
         /// 初始化一个新的音乐响应消息。
         /// </summary>
@@ -36,8 +35,7 @@ namespace Rabbit.WeiXin.MP.Messages.Response
             HqMusicUrl = hqMusicUrl;
         }
 
-        #endregion Constructor
-
+        
         /// <summary>
         /// 音乐标题
         /// </summary>
@@ -64,8 +62,7 @@ namespace Rabbit.WeiXin.MP.Messages.Response
         [Required]
         public string ThumbMediaId { get; set; }
 
-        #region Overrides of ResponseMessageBase
-
+        
         /// <summary>
         /// 消息类型。
         /// </summary>
@@ -74,6 +71,5 @@ namespace Rabbit.WeiXin.MP.Messages.Response
             get { return ResponseMessageType.Music; }
         }
 
-        #endregion Overrides of ResponseMessageBase
-    }
+            }
 }

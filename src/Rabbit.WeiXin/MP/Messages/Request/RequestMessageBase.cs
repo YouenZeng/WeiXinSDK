@@ -82,8 +82,7 @@ namespace Rabbit.WeiXin.MP.Messages.Request
     /// </summary>
     public abstract class RequestMessageBase : MessageBase, IRequestMessage
     {
-        #region Overrides of MessageBase
-
+        
         /// <summary>
         /// 开发者微信号。
         /// </summary>
@@ -96,10 +95,8 @@ namespace Rabbit.WeiXin.MP.Messages.Request
         [Required]
         public override string FromUserName { get; set; }
 
-        #endregion Overrides of MessageBase
-
-        #region Implementation of IRequestMessage
-
+        
+        
         /// <summary>
         /// 消息id，64位整型
         /// </summary>
@@ -110,6 +107,5 @@ namespace Rabbit.WeiXin.MP.Messages.Request
         /// </summary>
         public abstract RequestMessageType MessageType { get; }
 
-        #endregion Implementation of IRequestMessage
-    }
+            }
 }

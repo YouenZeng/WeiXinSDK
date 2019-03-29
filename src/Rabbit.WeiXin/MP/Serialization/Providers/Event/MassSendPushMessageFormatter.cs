@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event
 {
     internal sealed class MassSendPushMessageFormatter : XmlMessageFormatterBase<MassSendPushMessage>
     {
-        #region Overrides of XmlMessageFormatterBase<GroupMessageSendPushMessage>
-
+        
         public override MassSendPushMessage Deserialize(XContainer container)
         {
             var model = SetBaseInfo(container, new MassSendPushMessage
@@ -38,6 +37,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event
             throw new NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<GroupMessageSendPushMessage>
-    }
+            }
 }

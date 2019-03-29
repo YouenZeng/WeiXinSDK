@@ -7,15 +7,13 @@ namespace Rabbit.WeiXin.MP.Messages.Events.WiFi
     /// </summary>
     public class ConnectedMessage : EventMessageBase
     {
-        #region Overrides of EventMessageBase
-
+        
         /// <summary>
         /// 事件类型。
         /// </summary>
         public override EventType EventType { get { return EventType.WifiConnected; } }
 
-        #endregion Overrides of EventMessageBase
-
+        
         /// <summary>
         /// 连网时间。
         /// </summary>

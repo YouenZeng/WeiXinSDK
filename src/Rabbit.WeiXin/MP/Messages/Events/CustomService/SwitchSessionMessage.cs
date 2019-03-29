@@ -15,8 +15,7 @@
         /// </summary>
         public string ToAccount { get; set; }
 
-        #region Overrides of EventMessageBase
-
+        
         /// <summary>
         /// 事件类型。
         /// </summary>
@@ -25,6 +24,5 @@
             get { return EventType.KF_Switch_Session; }
         }
 
-        #endregion Overrides of EventMessageBase
-    }
+            }
 }

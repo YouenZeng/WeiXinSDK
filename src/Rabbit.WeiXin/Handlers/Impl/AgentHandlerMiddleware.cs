@@ -67,8 +67,7 @@ namespace Rabbit.WeiXin.Handlers.Impl
             _agentRequestModel = agentRequestModel;
         }
 
-        #region Overrides of HandlerMiddleware
-
+        
         /// <summary>
         /// 调用。
         /// </summary>
@@ -119,10 +118,8 @@ namespace Rabbit.WeiXin.Handlers.Impl
             return Next.Invoke(context);
         }
 
-        #endregion Overrides of HandlerMiddleware
-
-        #region Private Method
-
+        
+        
         private static string AppendParameter(string url, IEnumerable<KeyValuePair<string, string>> parameters)
         {
             var builder = new StringBuilder(url);
@@ -141,6 +138,5 @@ namespace Rabbit.WeiXin.Handlers.Impl
             return builder.ToString(0, builder.Length - 1);
         }
 
-        #endregion Private Method
-    }
+            }
 }

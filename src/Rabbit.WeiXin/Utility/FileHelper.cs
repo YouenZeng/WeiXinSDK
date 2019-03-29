@@ -138,15 +138,13 @@ namespace Rabbit.WeiXin.Utility
             return FileFormats.FirstOrDefault(i => i.Value.Equals(fileCode)).Key;
         }
 
-        #region Private Method
-
+        
         private static string GetFileCode(byte[] bytes)
         {
             return bytes[0].ToString(CultureInfo.InvariantCulture) + bytes[1];
         }
 
-        #endregion Private Method
-
+        
         /*
                 /// <summary>
                 /// 根据文件名称的扩展名获取一个随机的文件名称。

@@ -10,12 +10,10 @@ namespace Rabbit.WeiXin.Tests
     
     public class ResponseMessageFormatter
     {
-        #region Field
-
+        
         private readonly IResponseMessageFactory _responseMessageFactory = DefaultDependencyResolver.Instance.GetService<IResponseMessageFactory>();
 
-        #endregion Field
-
+        
         [Fact]
         public void ResponseMessageTextTest()
         {

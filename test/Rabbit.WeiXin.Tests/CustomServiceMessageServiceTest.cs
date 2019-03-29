@@ -9,25 +9,20 @@ namespace Rabbit.WeiXin.Tests
     
     public class CustomServiceMessageServiceTest : ApiTestBase
     {
-        #region Field
-
+        
         private readonly ICustomServiceMessageService _customServiceMessageService;
         private readonly ITemporaryMaterialService _temporaryMaterialService;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         public CustomServiceMessageServiceTest()
         {
             _customServiceMessageService = new CustomServiceMessageService(AccountModel);
             _temporaryMaterialService = new TemporaryMaterialService(AccountModel);
         }
 
-        #endregion Constructor
-
-        #region TestMethod
-
+        
+        
         [Fact]
         public void SendTextMessageTest()
         {
@@ -107,6 +102,5 @@ namespace Rabbit.WeiXin.Tests
             _customServiceMessageService.Send(new CustomServiceMessageCard(OpenId));
         }
 
-        #endregion TestMethod
-    }
+            }
 }

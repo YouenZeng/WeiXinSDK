@@ -73,8 +73,7 @@ namespace Rabbit.WeiXin.MP.Api.Material
             _accountModel = accountModel;
         }
 
-        #region Implementation of ITemporaryMaterialService
-
+        
         /// <summary>
         /// 添加一个临时素材。
         /// </summary>
@@ -100,11 +99,9 @@ namespace Rabbit.WeiXin.MP.Api.Material
             return TemporaryMaterialModel.CreateByHeades(responseHeaders, data);
         }
 
-        #endregion Implementation of ITemporaryMaterialService
-    }
+            }
 
-    #region Help Class
-
+    
     /// <summary>
     /// 添加临时素材结果模型。
     /// </summary>
@@ -199,5 +196,4 @@ namespace Rabbit.WeiXin.MP.Api.Material
         }
     }
 
-    #endregion Help Class
-}
+    }

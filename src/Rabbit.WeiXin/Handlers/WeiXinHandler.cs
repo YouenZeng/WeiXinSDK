@@ -25,14 +25,11 @@ namespace Rabbit.WeiXin.Handlers
     /// </summary>
     public sealed class DefaultWeiXinHandler : IWeiXinHandler
     {
-        #region Field
-
+        
         private readonly IHandlerBuilder _builder;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的默认微信处理程序。
         /// </summary>
@@ -42,10 +39,8 @@ namespace Rabbit.WeiXin.Handlers
             _builder = builder;
         }
 
-        #endregion Constructor
-
-        #region Implementation of IHandler
-
+        
+        
         /// <summary>
         /// 执行。
         /// </summary>
@@ -60,10 +55,8 @@ namespace Rabbit.WeiXin.Handlers
             return fristMiddleware.Invoke(context);
         }
 
-        #endregion Implementation of IHandler
-
-        #region Private Method
-
+        
+        
         private static HandlerMiddleware GetFirstMiddleware(ICollection<KeyValuePair<object, object[]>> middlewareItems)
         {
             if (middlewareItems.Count == 0)
@@ -106,6 +99,5 @@ namespace Rabbit.WeiXin.Handlers
             throw new NotSupportedException("无法将类型：" + middleware.GetType().FullName + "，注册为处理中间件。");
         }
 
-        #endregion Private Method
-    }
+            }
 }

@@ -9,8 +9,7 @@ namespace Rabbit.WeiXin.MP.Api.Material
     /// </summary>
     public abstract class MaterialServiceBase
     {
-        #region Protected Method
-
+        
         /// <summary>
         /// ÉÏ´«¡£
         /// </summary>
@@ -37,6 +36,5 @@ namespace Rabbit.WeiXin.MP.Api.Material
             return WeiXinHttpHelper.PostResultByJson<TResult>(url, data, createBytes.ContentType);
         }
 
-        #endregion Protected Method
-    }
+            }
 }

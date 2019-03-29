@@ -13,8 +13,7 @@ namespace Rabbit.WeiXin.Handlers.Impl
     /// </summary>
     public abstract class MessageHandlerMiddleware : HandlerMiddleware
     {
-        #region Constructor
-
+        
         /// <summary>
         /// 初始化一个新的处理中间件。
         /// </summary>
@@ -24,19 +23,15 @@ namespace Rabbit.WeiXin.Handlers.Impl
         {
         }
 
-        #endregion Constructor
-
-        #region Property
-
+        
+        
         /// <summary>
         /// 处理上下文。
         /// </summary>
         protected IHandlerContext Context { get; private set; }
 
-        #endregion Property
-
-        #region Overrides of HandlerMiddleware
-
+        
+        
         /// <summary>
         /// 调用。
         /// </summary>
@@ -100,10 +95,8 @@ namespace Rabbit.WeiXin.Handlers.Impl
             return Next.Invoke(context);
         }
 
-        #endregion Overrides of HandlerMiddleware
-
-        #region Receive Message
-         
+        
+                 
         /// <summary>
         /// 文字类型请求
         /// </summary>
@@ -250,8 +243,7 @@ namespace Rabbit.WeiXin.Handlers.Impl
             return responseMessage;
         }
 
-        #region Event Push
-
+        
         /// <summary>
         /// Event事件类型请求之LOCATION
         /// </summary>
@@ -408,8 +400,6 @@ namespace Rabbit.WeiXin.Handlers.Impl
             return null;
         }
 
-        #endregion Event Push
-
-        #endregion Receive Message
-    }
+        
+            }
 }

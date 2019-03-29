@@ -31,8 +31,7 @@ namespace Rabbit.WeiXin.Tests.Utility
             return GetByte("1.mp4");
         }
 
-        #region Private Method
-
+        
         private static byte[] GetByte(string name)
         {
             var assembly = Assembly.Load(new AssemblyName(typeof(ApiTestHelper).AssemblyQualifiedName));
@@ -46,6 +45,5 @@ namespace Rabbit.WeiXin.Tests.Utility
             }
         }
 
-        #endregion Private Method
-    }
+            }
 }

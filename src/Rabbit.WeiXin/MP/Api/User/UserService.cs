@@ -48,14 +48,11 @@ namespace Rabbit.WeiXin.MP.Api.User
     /// </summary>
     public class UserService : IUserService
     {
-        #region Field
-
+        
         private readonly AccountModel _accountModel;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的用户服务实例。
         /// </summary>
@@ -65,10 +62,8 @@ namespace Rabbit.WeiXin.MP.Api.User
             _accountModel = accountModel;
         }
 
-        #endregion Constructor
-
-        #region Implementation of IUserService
-
+        
+        
         /// <summary>
         /// 设置用户备注。
         /// </summary>
@@ -126,8 +121,7 @@ namespace Rabbit.WeiXin.MP.Api.User
             return JsonConvert.DeserializeObject<UserInfo[]>(JObject.Parse(content)["user_info_list"].ToString());
         }
 
-        #endregion Implementation of IUserService
-    }
+            }
 
     /// <summary>
     /// 用户服务扩展方法。
@@ -147,8 +141,7 @@ namespace Rabbit.WeiXin.MP.Api.User
         }
     }
 
-    #region Help Class
-
+    
     /// <summary>
     /// 性别枚举。
     /// </summary>
@@ -343,5 +336,4 @@ namespace Rabbit.WeiXin.MP.Api.User
         public string Language { get; set; }
     }
 
-    #endregion Help Class
-}
+    }

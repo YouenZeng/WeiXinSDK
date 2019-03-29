@@ -9,8 +9,7 @@ namespace Rabbit.WeiXin.MP.Messages.Response
     /// </summary>
     public sealed class ResponseMessageText : ResponseMessageBase
     {
-        #region Constructor
-
+        
         /// <summary>
         /// 初始化一个新的文本响应消息。
         /// </summary>
@@ -28,16 +27,14 @@ namespace Rabbit.WeiXin.MP.Messages.Response
             Content = content.NotEmptyOrWhiteSpace("content");
         }
 
-        #endregion Constructor
-
+        
         /// <summary>
         /// 文本消息内容
         /// </summary>
         [Required]
         public string Content { get; set; }
 
-        #region Overrides of ResponseMessageBase
-
+        
         /// <summary>
         /// 消息类型。
         /// </summary>
@@ -46,6 +43,5 @@ namespace Rabbit.WeiXin.MP.Messages.Response
             get { return ResponseMessageType.Text; }
         }
 
-        #endregion Overrides of ResponseMessageBase
-    }
+            }
 }

@@ -56,14 +56,11 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
     /// </summary>
     public class CustomServiceSessionService : ICustomServiceSessionService
     {
-        #region Field
-
+        
         private readonly AccountModel _accountModel;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的多客服会话服务实例。
         /// </summary>
@@ -73,10 +70,8 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
             _accountModel = accountModel;
         }
 
-        #endregion Constructor
-
-        #region Implementation of ICustomSessionService
-
+        
+        
         /// <summary>
         /// 创建会话。
         /// </summary>
@@ -158,11 +153,9 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
             return WeiXinHttpHelper.GetResultByJson<WaitServiceInfo>(url);
         }
 
-        #endregion Implementation of ICustomSessionService
-    }
+            }
 
-    #region Help Class
-
+    
     /// <summary>
     /// 等待服务的信息。
     /// </summary>
@@ -253,5 +246,4 @@ namespace Rabbit.WeiXin.MP.Api.CustomService
         public string Account { get; set; }
     }
 
-    #endregion Help Class
-}
+    }

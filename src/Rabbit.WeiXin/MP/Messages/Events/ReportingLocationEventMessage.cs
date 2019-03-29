@@ -20,8 +20,7 @@
         /// </summary>
         public double Precision { get; set; }
 
-        #region Overrides of EventMessageBase
-
+        
         /// <summary>
         /// 事件类型。
         /// </summary>
@@ -30,6 +29,5 @@
             get { return EventType.Location; }
         }
 
-        #endregion Overrides of EventMessageBase
-    }
+            }
 }

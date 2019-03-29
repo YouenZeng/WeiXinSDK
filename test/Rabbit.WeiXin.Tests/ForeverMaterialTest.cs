@@ -8,23 +8,18 @@ namespace Rabbit.WeiXin.Tests
     
     public class ForeverMaterialTest : ApiTestBase
     {
-        #region Field
-
+        
         private readonly IForeverMaterialService _materialService;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         public ForeverMaterialTest()
         {
             _materialService = new ForeverMaterialService(AccountModel);
         }
 
-        #endregion Constructor
-
-        #region Test Method
-
+        
+        
         [Fact]
         public void AddThumbnailsTest()
         {
@@ -144,6 +139,5 @@ namespace Rabbit.WeiXin.Tests
             Assert.NotNull(news);
         }
 
-        #endregion Test Method
-    }
+            }
 }

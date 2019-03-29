@@ -26,14 +26,11 @@ namespace Rabbit.WeiXin.Open.Api
     /// </summary>
     public sealed class VerifyTicketService : IVerifyTicketService
     {
-        #region Field
-
+        
         private ComponentVerifyTicketPush _model;
 
-        #endregion Field
-
-        #region Implementation of IVerifyTicketService
-
+        
+        
         /// <summary>
         /// 设置核实票据信息。
         /// </summary>
@@ -52,6 +49,5 @@ namespace Rabbit.WeiXin.Open.Api
             return _model;
         }
 
-        #endregion Implementation of IVerifyTicketService
-    }
+            }
 }

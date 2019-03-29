@@ -7,8 +7,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.CustomMenu
 {
     internal sealed class PicPhotoOrAlbumMessageFormatter : XmlMessageFormatterBase<PicPhotoOrAlbumMessage>
     {
-        #region Overrides of XmlMessageFormatterBase<PicPhotoOrAlbumMessage>
-
+        
         public override PicPhotoOrAlbumMessage Deserialize(XContainer container)
         {
             var info = container.Element("SendPicsInfo");
@@ -28,6 +27,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.CustomMenu
             throw new NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<PicPhotoOrAlbumMessage>
-    }
+            }
 }

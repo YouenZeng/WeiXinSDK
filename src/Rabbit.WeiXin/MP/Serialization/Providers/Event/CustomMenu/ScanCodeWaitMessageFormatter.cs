@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.CustomMenu
 {
     internal sealed class ScanCodeWaitMessageFormatter : XmlMessageFormatterBase<ScanCodeWaitMessage>
     {
-        #region Overrides of XmlMessageFormatterBase<ScanCodeWaitMessageCustomMenuEventMessage>
-
+        
         public override ScanCodeWaitMessage Deserialize(XContainer container)
         {
             var info = container.Element("ScanCodeInfo");
@@ -34,6 +33,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.CustomMenu
             throw new NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<ScanCodeWaitMessageCustomMenuEventMessage>
-    }
+            }
 }

@@ -18,8 +18,7 @@ namespace Rabbit.WeiXin.Handlers.Impl
         {
         }
 
-        #region Overrides of HandlerMiddleware
-
+        
         /// <summary>
         /// 调用。
         /// </summary>
@@ -41,6 +40,5 @@ namespace Rabbit.WeiXin.Handlers.Impl
             return Next.Invoke(context);
         }
 
-        #endregion Overrides of HandlerMiddleware
-    }
+            }
 }

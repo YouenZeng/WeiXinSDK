@@ -12,8 +12,7 @@ namespace Rabbit.WeiXin.MP.Messages.Request
         /// </summary>
         public Uri PicUrl { get; set; }
 
-        #region Overrides of MessageBase
-
+        
         /// <summary>
         /// 消息类型。
         /// </summary>
@@ -22,15 +21,12 @@ namespace Rabbit.WeiXin.MP.Messages.Request
             get { return RequestMessageType.Image; }
         }
 
-        #endregion Overrides of MessageBase
-
-        #region Implementation of IMediaMessage
-
+        
+        
         /// <summary>
         /// 媒体id，可以调用多媒体文件下载接口拉取数据。
         /// </summary>
         public string MediaId { get; set; }
 
-        #endregion Implementation of IMediaMessage
-    }
+            }
 }

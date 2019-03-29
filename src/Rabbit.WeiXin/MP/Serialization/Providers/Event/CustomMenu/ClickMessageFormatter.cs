@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.CustomMenu
 {
     internal sealed class ClickMessageFormatter : XmlMessageFormatterBase<ClickMessage>
     {
-        #region Overrides of XmlMessageFormatterBase<ClickCustomMenuEventKeyMessage>
-
+        
         public override ClickMessage Deserialize(XContainer container)
         {
             return SetBaseInfo(container, new ClickMessage
@@ -21,6 +20,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.CustomMenu
             throw new NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<ClickCustomMenuEventKeyMessage>
-    }
+            }
 }

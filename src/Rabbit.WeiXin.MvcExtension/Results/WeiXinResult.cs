@@ -16,8 +16,7 @@ namespace Rabbit.WeiXin.MvcExtension.Results
     /// </summary>
     public class WeiXinResult : ContentResult
     {
-        #region Constructor
-
+        
         /// <summary>
         /// 初始化一个空的微信结果。
         /// </summary>
@@ -47,15 +46,12 @@ namespace Rabbit.WeiXin.MvcExtension.Results
             Content = content;
         }
 
-        #endregion Constructor
-
-        #region Public Method
-
+        
+        
         /// <summary>
         /// 一个空的结果。
         /// </summary>
         public static WeiXinResult Empty = new WeiXinResult();
 
-        #endregion Public Method
-    }
+            }
 }

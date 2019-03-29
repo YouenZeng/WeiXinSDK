@@ -94,17 +94,14 @@ namespace Rabbit.WeiXin.Open.Api
     /// </summary>
     public sealed class CommonService : ICommonService
     {
-        #region Field
-
+        
         private readonly AccountModel _accountModel;
         private AccessTokenModel _accessTokenModel;
         private AuthorizeCodeResult _authorizeCodeResult;
         private readonly ConcurrentDictionary<string, object> _objectCacheDictionary = new ConcurrentDictionary<string, object>();
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的通用服务实例。
         /// </summary>
@@ -114,10 +111,8 @@ namespace Rabbit.WeiXin.Open.Api
             _accountModel = accountModel;
         }
 
-        #endregion Constructor
-
-        #region Implementation of ICommonService
-
+        
+        
         /// <summary>
         /// 获取授权Url。
         /// </summary>
@@ -428,10 +423,8 @@ namespace Rabbit.WeiXin.Open.Api
             }
         }
 
-        #endregion Implementation of ICommonService
-
-        #region Private Method
-
+        
+        
         private PublicAccountAuthorizerInfo InternalGetPublicAccountAuthorizerInfo(string authorizationCode)
         {
             var get = new Func<string, PublicAccountAuthorizerInfo>(accessToken =>
@@ -503,18 +496,15 @@ namespace Rabbit.WeiXin.Open.Api
             }).ToArray();
         }
 
-        #endregion Private Method
-    }
+            }
 
-    #region Help Class
-
+    
     /// <summary>
     /// 获取第三方平台的全局唯一票据结果模型。
     /// </summary>
     public sealed class AccessTokenModel
     {
-        #region Constructor
-
+        
         /// <summary>
         /// 初始化一个新的第三方平台的全局唯一票据。
         /// </summary>
@@ -523,8 +513,7 @@ namespace Rabbit.WeiXin.Open.Api
             CreateTime = DateTime.Now;
         }
 
-        #endregion Constructor
-
+        
         /// <summary>
         /// 第三方平台access_token。
         /// </summary>
@@ -558,8 +547,7 @@ namespace Rabbit.WeiXin.Open.Api
     /// </summary>
     public sealed class RefreshAccessToken
     {
-        #region Constructor
-
+        
         /// <summary>
         /// 初始化一个新的第三方平台的全局唯一票据。
         /// </summary>
@@ -568,8 +556,7 @@ namespace Rabbit.WeiXin.Open.Api
             CreateTime = DateTime.Now;
         }
 
-        #endregion Constructor
-
+        
         /// <summary>
         /// 授权方令牌。
         /// </summary>
@@ -609,15 +596,13 @@ namespace Rabbit.WeiXin.Open.Api
     /// </summary>
     public sealed class AuthorizeCodeResult
     {
-        #region Constructor
-
+        
         internal AuthorizeCodeResult()
         {
             CreateTime = DateTime.Now;
         }
 
-        #endregion Constructor
-
+        
         /// <summary>
         /// 授权码。
         /// </summary>
@@ -905,5 +890,4 @@ namespace Rabbit.WeiXin.Open.Api
         public AuthorizerInfo Authorizer { get; set; }
     }
 
-    #endregion Help Class
-}
+    }

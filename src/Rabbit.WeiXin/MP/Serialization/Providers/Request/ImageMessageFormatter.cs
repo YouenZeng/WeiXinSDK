@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Request
 {
     internal sealed class ImageMessageFormatter : XmlMessageFormatterBase<RequestMessageImage>
     {
-        #region Overrides of XmlMessageFormatterBase<RequestMessageImage>
-
+        
         public override RequestMessageImage Deserialize(XContainer container)
         {
             return SetBaseInfo(container, new RequestMessageImage
@@ -21,6 +20,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Request
             throw new NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<RequestMessageImage>
-    }
+            }
 }

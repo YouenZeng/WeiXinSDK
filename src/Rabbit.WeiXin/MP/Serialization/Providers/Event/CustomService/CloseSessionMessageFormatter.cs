@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.CustomService
 {
     internal sealed class CloseSessionMessageFormatter : XmlMessageFormatterBase<CloseSessionMessage>
     {
-        #region Overrides of XmlMessageFormatterBase<CustomServiceCloseSessionMessage>
-
+        
         public override CloseSessionMessage Deserialize(XContainer container)
         {
             return SetBaseInfo(container, new CloseSessionMessage
@@ -21,6 +20,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.CustomService
             throw new NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<CustomServiceCloseSessionMessage>
-    }
+            }
 }

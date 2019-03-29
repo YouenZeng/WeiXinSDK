@@ -9,14 +9,11 @@ namespace Rabbit.WeiXin.MP.Messages.Response
     /// </summary>
     public sealed class ResponseMessageNews : ResponseMessageBase
     {
-        #region Field
-
+        
         private const ushort ArticleMaxCount = 10;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的图文响应消息实例。
         /// </summary>
@@ -39,8 +36,7 @@ namespace Rabbit.WeiXin.MP.Messages.Response
             Articles = articles;
         }
 
-        #endregion Constructor
-
+        
         /// <summary>
         /// 文章类型。
         /// </summary>
@@ -83,8 +79,7 @@ namespace Rabbit.WeiXin.MP.Messages.Response
             }
         }
 
-        #region Overrides of ResponseMessageBase
-
+        
         /// <summary>
         /// 消息类型。
         /// </summary>
@@ -93,10 +88,8 @@ namespace Rabbit.WeiXin.MP.Messages.Response
             get { return ResponseMessageType.News; }
         }
 
-        #endregion Overrides of ResponseMessageBase
-
-        #region Public Method
-
+        
+        
         /// <summary>
         /// 追加文章，如果 <see cref="Articles"/> 数量大于10则忽略。
         /// </summary>
@@ -126,6 +119,5 @@ namespace Rabbit.WeiXin.MP.Messages.Response
             return Articles == null || Articles.Length < ArticleMaxCount;
         }
 
-        #endregion Public Method
-    }
+            }
 }

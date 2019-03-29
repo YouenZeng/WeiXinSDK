@@ -25,8 +25,7 @@
         /// </summary>
         public string Label { get; set; }
 
-        #region Overrides of MessageBase
-
+        
         /// <summary>
         /// 消息类型。
         /// </summary>
@@ -35,6 +34,5 @@
             get { return RequestMessageType.Location; }
         }
 
-        #endregion Overrides of MessageBase
-    }
+            }
 }

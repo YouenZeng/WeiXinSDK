@@ -34,8 +34,7 @@ namespace Rabbit.WeiXin.MP.Serialization
     /// </summary>
     internal sealed class MessageFormatterFactory : IMessageFormatterFactory
     {
-        #region Field
-
+        
         private static readonly IDictionary<RequestMessageType, IMessageFormatter> RequestMessageFormatterDictionary = new Dictionary<RequestMessageType, IMessageFormatter>
         {
             {RequestMessageType.Text, new TextMessageFormatter()},
@@ -59,10 +58,8 @@ namespace Rabbit.WeiXin.MP.Serialization
             {ResponseMessageType.Voice, new response.VoiceMessageFormatter()}
         };
 
-        #endregion Field
-
-        #region Implementation of IMessageFormatterFactory
-
+        
+        
         /// <summary>
         /// 根据请求消息类型得到一个对应的格式化器。
         /// </summary>
@@ -95,6 +92,5 @@ namespace Rabbit.WeiXin.MP.Serialization
             return formatter;
         }
 
-        #endregion Implementation of IMessageFormatterFactory
-    }
+            }
 }

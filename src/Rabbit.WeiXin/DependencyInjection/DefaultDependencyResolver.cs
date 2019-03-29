@@ -11,8 +11,7 @@ namespace Rabbit.WeiXin.DependencyInjection
     /// </summary>
     public class DefaultDependencyResolver : IDependencyResolver
     {
-        #region Field
-
+        
         private static readonly IDependencyResolver DependencyResolver;
 
         private static readonly ISignatureService SignatureService = new SignatureService();
@@ -32,10 +31,8 @@ namespace Rabbit.WeiXin.DependencyInjection
             {typeof (IResponseMessageFactory), () => ResponseMessageFactory}
         };
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         static DefaultDependencyResolver()
         {
             DependencyResolver = new DefaultDependencyResolver();
@@ -49,19 +46,15 @@ namespace Rabbit.WeiXin.DependencyInjection
             ServiceDictionary[typeof(IUserSessionCollection)] = () => _userSessionCollection;
         }
 
-        #endregion Constructor
-
-        #region Property
-
+        
+        
         /// <summary>
         /// 一个全局的依赖解析器实例。
         /// </summary>
         public static IDependencyResolver Instance { get { return DependencyResolver; } }
 
-        #endregion Property
-
-        #region Implementation of IDependencyResolver
-
+        
+        
         /// <summary>
         /// 得到一个服务实例。
         /// </summary>
@@ -82,10 +75,8 @@ namespace Rabbit.WeiXin.DependencyInjection
             throw new NotImplementedException();
         }
 
-        #endregion Implementation of IDependencyResolver
-
-        #region Public Method
-
+        
+        
         /// <summary>
         /// 创建一个新的 <see cref="DefaultDependencyResolver"/> 依赖解析器。
         /// </summary>
@@ -95,6 +86,5 @@ namespace Rabbit.WeiXin.DependencyInjection
             return new DefaultDependencyResolver();
         }
 
-        #endregion Public Method
-    }
+            }
 }

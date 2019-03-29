@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.WiFi
 {
     internal sealed class ConnectedMessageFormatter : XmlMessageFormatterBase<ConnectedMessage>
     {
-        #region Overrides of XmlMessageFormatterBase<ConnectedMessage>
-
+        
         /// <summary>
         /// 反序列化。
         /// </summary>
@@ -33,6 +32,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.WiFi
             throw new System.NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<ConnectedMessage>
-    }
+            }
 }

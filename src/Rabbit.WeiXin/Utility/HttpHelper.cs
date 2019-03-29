@@ -61,8 +61,7 @@ namespace Rabbit.WeiXin.Utility
             return content;
         }
 
-        #region Private Method
-
+        
         private static TResult GetResultByJson<TResult>(byte[] data)
         {
             var content = Encoding.UTF8.GetString(data);
@@ -70,8 +69,7 @@ namespace Rabbit.WeiXin.Utility
             return JsonConvert.DeserializeObject<TResult>(content);
         }
 
-        #endregion Private Method
-    }
+            }
 
     internal static class HttpHelper
     {

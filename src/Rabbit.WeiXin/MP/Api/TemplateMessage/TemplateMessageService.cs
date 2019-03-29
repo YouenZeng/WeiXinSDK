@@ -42,14 +42,11 @@ namespace Rabbit.WeiXin.MP.Api.TemplateMessage
     /// </summary>
     public sealed class TemplateMessageService : ITemplateMessageService
     {
-        #region Field
-
+        
         private readonly AccountModel _accountModel;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的模板消息服务实例。
         /// </summary>
@@ -59,10 +56,8 @@ namespace Rabbit.WeiXin.MP.Api.TemplateMessage
             _accountModel = accountModel;
         }
 
-        #endregion Constructor
-
-        #region Implementation of ITemplateMessageService
-
+        
+        
         /// <summary>
         /// 设置行业。
         /// </summary>
@@ -110,11 +105,9 @@ namespace Rabbit.WeiXin.MP.Api.TemplateMessage
             return JObject.Parse(json).Value<ulong>("msgid");
         }
 
-        #endregion Implementation of ITemplateMessageService
-    }
+            }
 
-    #region Help Class
-
+    
     /// <summary>
     /// 模板消息字段数据项。
     /// </summary>
@@ -153,5 +146,4 @@ namespace Rabbit.WeiXin.MP.Api.TemplateMessage
         public string Color { get; set; }
     }
 
-    #endregion Help Class
-}
+    }

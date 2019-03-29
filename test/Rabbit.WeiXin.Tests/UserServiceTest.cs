@@ -8,23 +8,18 @@ namespace Rabbit.WeiXin.Tests
     
     public class UserServiceTest : ApiTestBase
     {
-        #region Field
-
+        
         private readonly IUserService _userService;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         public UserServiceTest()
         {
             _userService = new UserService(AccountModel);
         }
 
-        #endregion Constructor
-
-        #region Test Method
-
+        
+        
         [Fact]
         public void GetUserTest()
         {
@@ -66,6 +61,5 @@ namespace Rabbit.WeiXin.Tests
             Assert.True(list.Any());
         }
 
-        #endregion Test Method
-    }
+            }
 }

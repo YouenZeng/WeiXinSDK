@@ -10,23 +10,18 @@ namespace Rabbit.WeiXin.Tests
     
     public class StoreServiceTest : ApiTestBase
     {
-        #region Field
-
+        
         private readonly IStoreService _storeService;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         public StoreServiceTest()
         {
             _storeService = new StoreService(AccountModel);
         }
 
-        #endregion Constructor
-
-        #region Test Method
-
+        
+        
         [Fact]
         public void UploadImageTest()
         {
@@ -90,6 +85,5 @@ namespace Rabbit.WeiXin.Tests
             _storeService.Delete(289123561);
         }
 
-        #endregion Test Method
-    }
+            }
 }

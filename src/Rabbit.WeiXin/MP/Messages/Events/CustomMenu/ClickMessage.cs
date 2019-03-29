@@ -5,8 +5,7 @@
     /// </summary>
     public sealed class ClickMessage : CustomMenuEventKeyMessageBase
     {
-        #region Overrides of EventMessageBase
-
+        
         /// <summary>
         /// 事件类型。
         /// </summary>
@@ -15,6 +14,5 @@
             get { return EventType.Click; }
         }
 
-        #endregion Overrides of EventMessageBase
-    }
+            }
 }

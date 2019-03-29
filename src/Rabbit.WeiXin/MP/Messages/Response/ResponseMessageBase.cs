@@ -71,8 +71,7 @@ namespace Rabbit.WeiXin.MP.Messages.Response
     /// </summary>
     public abstract class ResponseMessageBase : MessageBase, IResponseMessage
     {
-        #region Overrides of MessageBase
-
+        
         /// <summary>
         /// 接收方帐号（收到的OpenID）。
         /// </summary>
@@ -85,15 +84,12 @@ namespace Rabbit.WeiXin.MP.Messages.Response
         [Required]
         public override string FromUserName { get; set; }
 
-        #endregion Overrides of MessageBase
-
-        #region Implementation of IResponseMessage
-
+        
+        
         /// <summary>
         /// 消息类型。
         /// </summary>
         public abstract ResponseMessageType MessageType { get; }
 
-        #endregion Implementation of IResponseMessage
-    }
+            }
 }

@@ -9,8 +9,7 @@ namespace Rabbit.WeiXin.MP.Messages.Response
     /// </summary>
     public sealed class ResponseMessageVideo : ResponseMessageBase, IMediaMessage
     {
-        #region Constructor
-
+        
         /// <summary>
         /// 初始化一个新的视频响应消息。
         /// </summary>
@@ -32,8 +31,7 @@ namespace Rabbit.WeiXin.MP.Messages.Response
             Description = description;
         }
 
-        #endregion Constructor
-
+        
         /// <summary>
         /// 视频消息的标题
         /// </summary>
@@ -44,8 +42,7 @@ namespace Rabbit.WeiXin.MP.Messages.Response
         /// </summary>
         public string Description { get; set; }
 
-        #region Overrides of ResponseMessageBase
-
+        
         /// <summary>
         /// 消息类型。
         /// </summary>
@@ -54,16 +51,13 @@ namespace Rabbit.WeiXin.MP.Messages.Response
             get { return ResponseMessageType.Video; }
         }
 
-        #endregion Overrides of ResponseMessageBase
-
-        #region Implementation of IMediaMessage
-
+        
+        
         /// <summary>
         /// 媒体id，可以调用多媒体文件下载接口拉取数据。
         /// </summary>
         [Required]
         public string MediaId { get; set; }
 
-        #endregion Implementation of IMediaMessage
-    }
+            }
 }

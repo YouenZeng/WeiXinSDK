@@ -5,8 +5,7 @@ namespace Rabbit.WeiXin.MP.Messages.Events
     /// </summary>
     public sealed class SubscribeEventMessage : EventMessageBase
     {
-        #region Overrides of EventMessageBase
-
+        
         /// <summary>
         /// 事件类型。
         /// </summary>
@@ -15,6 +14,5 @@ namespace Rabbit.WeiXin.MP.Messages.Events
             get { return EventType.Subscribe; }
         }
 
-        #endregion Overrides of EventMessageBase
-    }
+            }
 }

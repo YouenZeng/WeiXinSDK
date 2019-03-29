@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.CustomMenu
 {
     internal sealed class ViewMessageFormatter : XmlMessageFormatterBase<ViewMessage>
     {
-        #region Overrides of XmlMessageFormatterBase<ViewCustomMenuEventKeyMessage>
-
+        
         public override ViewMessage Deserialize(XContainer container)
         {
             return SetBaseInfo(container, new ViewMessage
@@ -21,6 +20,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.CustomMenu
             throw new NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<ViewCustomMenuEventKeyMessage>
-    }
+            }
 }

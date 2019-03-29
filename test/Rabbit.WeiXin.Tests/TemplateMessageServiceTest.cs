@@ -6,23 +6,18 @@ namespace Rabbit.WeiXin.Tests
     
     public class TemplateMessageServiceTest : ApiTestBase
     {
-        #region Field
-
+        
         private readonly ITemplateMessageService _templateMessageService;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         public TemplateMessageServiceTest()
         {
             _templateMessageService = new TemplateMessageService(AccountModel);
         }
 
-        #endregion Constructor
-
-        #region Test Method
-
+        
+        
         [Fact]
         public void SendTest()
         {
@@ -35,6 +30,5 @@ namespace Rabbit.WeiXin.Tests
             });
         }
 
-        #endregion Test Method
-    }
+            }
 }

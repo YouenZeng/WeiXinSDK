@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Request
 {
     internal sealed class LocationMessageFormatter : XmlMessageFormatterBase<RequestMessageLocation>
     {
-        #region Overrides of XmlMessageFormatterBase<RequestMessageLocation>
-
+        
         public override RequestMessageLocation Deserialize(XContainer container)
         {
             return SetBaseInfo(container, new RequestMessageLocation
@@ -24,6 +23,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Request
             throw new NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<RequestMessageLocation>
-    }
+            }
 }

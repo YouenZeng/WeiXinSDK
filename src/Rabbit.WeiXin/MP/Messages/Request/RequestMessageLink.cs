@@ -22,8 +22,7 @@ namespace Rabbit.WeiXin.MP.Messages.Request
         /// </summary>
         public Uri Url { get; set; }
 
-        #region Overrides of MessageBase
-
+        
         /// <summary>
         /// 消息类型。
         /// </summary>
@@ -32,6 +31,5 @@ namespace Rabbit.WeiXin.MP.Messages.Request
             get { return RequestMessageType.Link; }
         }
 
-        #endregion Overrides of MessageBase
-    }
+            }
 }

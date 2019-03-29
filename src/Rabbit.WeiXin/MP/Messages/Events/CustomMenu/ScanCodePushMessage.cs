@@ -26,8 +26,7 @@
         /// </summary>
         public string Result { get; set; }
 
-        #region Overrides of EventMessageBase
-
+        
         /// <summary>
         /// 事件类型。
         /// </summary>
@@ -36,6 +35,5 @@
             get { return EventType.ScanCode_Push; }
         }
 
-        #endregion Overrides of EventMessageBase
-    }
+            }
 }

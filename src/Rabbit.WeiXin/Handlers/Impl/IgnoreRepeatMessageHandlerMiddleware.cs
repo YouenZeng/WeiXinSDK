@@ -13,14 +13,11 @@ namespace Rabbit.WeiXin.Handlers.Impl
     /// </summary>
     public class IgnoreRepeatMessageHandlerMiddleware : HandlerMiddleware
     {
-        #region Field
-
+        
         private static readonly IList<KeyValuePair<string, DateTime>> MessageIdentity = new List<KeyValuePair<string, DateTime>>();
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的处理中间件。
         /// </summary>
@@ -30,10 +27,8 @@ namespace Rabbit.WeiXin.Handlers.Impl
         {
         }
 
-        #endregion Constructor
-
-        #region Overrides of HandlerMiddleware
-
+        
+        
         /// <summary>
         /// 调用。
         /// </summary>
@@ -46,8 +41,7 @@ namespace Rabbit.WeiXin.Handlers.Impl
             //得到消息的唯一标识。
             var identity = GetMessageIdentity(requestMessage);
 
-            #region 删除无效的消息标识以节省资源
-
+            
             for (var i = 0; i < MessageIdentity.Count; i++)
             {
                 var item = MessageIdentity[i];
@@ -58,8 +52,7 @@ namespace Rabbit.WeiXin.Handlers.Impl
                 }
             }
 
-            #endregion 删除无效的消息标识以节省资源
-
+            
             //如果消息已经被标识为处理则跳过。
             if (MessageIdentity.Any(i => i.Key == identity))
                 return EmptyHandlerMiddleware.Instance.Invoke(context);
@@ -70,10 +63,8 @@ namespace Rabbit.WeiXin.Handlers.Impl
             return Next.Invoke(context);
         }
 
-        #endregion Overrides of HandlerMiddleware
-
-        #region Private Method
-
+        
+        
         private static string GetMessageIdentity(IMessageBase requestMessage)
         {
             var message = requestMessage as IRequestMessage;
@@ -85,6 +76,5 @@ namespace Rabbit.WeiXin.Handlers.Impl
             return requestMessage.FromUserName + requestMessage.CreateTime;
         }
 
-        #endregion Private Method
-    }
+            }
 }

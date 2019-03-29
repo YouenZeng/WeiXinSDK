@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.Card
 {
     internal sealed class CardEventUserEnterSessionMessageFormatter : XmlMessageFormatterBase<CardEventUserEnterSessionMessage>
     {
-        #region Overrides of XmlMessageFormatterBase<CardEventUserEnterSessionMessage>
-
+        
         /// <summary>
         /// 反序列化。
         /// </summary>
@@ -32,6 +31,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.Card
             throw new NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<CardEventUserEnterSessionMessage>
-    }
+            }
 }

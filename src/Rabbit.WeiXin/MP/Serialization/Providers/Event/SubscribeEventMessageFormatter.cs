@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event
 {
     internal sealed class SubscribeEventMessageFormatter : XmlMessageFormatterBase<SubscribeEventMessage>
     {
-        #region Overrides of XmlMessageFormatterBase<SubscribeEventMessage>
-
+        
         public override SubscribeEventMessage Deserialize(XContainer container)
         {
             return SetBaseInfo(container, new SubscribeEventMessage());
@@ -18,6 +17,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event
             throw new NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<SubscribeEventMessage>
-    }
+            }
 }

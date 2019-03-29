@@ -6,8 +6,7 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.CustomService
 {
     internal sealed class CreateSessionMessageFormatter : XmlMessageFormatterBase<CreateSessionMessage>
     {
-        #region Overrides of XmlMessageFormatterBase<CustomServiceCreateSessionMessage>
-
+        
         public override CreateSessionMessage Deserialize(XContainer container)
         {
             return SetBaseInfo(container, new CreateSessionMessage
@@ -21,6 +20,5 @@ namespace Rabbit.WeiXin.MP.Serialization.Providers.Event.CustomService
             throw new NotImplementedException();
         }
 
-        #endregion Overrides of XmlMessageFormatterBase<CustomServiceCreateSessionMessage>
-    }
+            }
 }

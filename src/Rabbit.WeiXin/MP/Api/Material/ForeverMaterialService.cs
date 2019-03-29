@@ -81,14 +81,11 @@ namespace Rabbit.WeiXin.MP.Api.Material
     /// </summary>
     public sealed class ForeverMaterialService : MaterialServiceBase, IForeverMaterialService
     {
-        #region Field
-
+        
         private readonly AccountModel _accountModel;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的永久素材服务实例。
         /// </summary>
@@ -98,10 +95,8 @@ namespace Rabbit.WeiXin.MP.Api.Material
             _accountModel = accountModel;
         }
 
-        #endregion Constructor
-
-        #region Implementation of IMediaService
-
+        
+        
         /// <summary>
         /// 添加一个其他类型的永久素材。
         /// </summary>
@@ -211,18 +206,15 @@ namespace Rabbit.WeiXin.MP.Api.Material
             return JsonConvert.DeserializeObject<NewsArticleModel[]>(((JArray)JObject.Parse(content)["news_item"]).ToString());
         }
 
-        #endregion Implementation of IMediaService
-
-        #region Private Method
-
+        
+        
         private byte[] GetMaterial(string mediaId)
         {
             var url = "https://api.weixin.qq.com/cgi-bin/material/get_material?access_token=" + _accountModel.GetAccessToken();
             return WeiXinHttpHelper.Post(url, new { media_id = mediaId });
         }
 
-        #endregion Private Method
-    }
+            }
 
     /// <summary>
     /// 永久素材服务扩展方法。
@@ -253,8 +245,7 @@ namespace Rabbit.WeiXin.MP.Api.Material
         }
     }
 
-    #region Help Class
-
+    
     /// <summary>
     /// 添加永久素材的结果模型。
     /// </summary>
@@ -488,5 +479,4 @@ namespace Rabbit.WeiXin.MP.Api.Material
         public string Description { get; set; }
     }
 
-    #endregion Help Class
-}
+    }

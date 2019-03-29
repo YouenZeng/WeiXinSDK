@@ -111,22 +111,18 @@ namespace Tencent
                 var encrypt = aes.CreateEncryptor(aes.Key, aes.IV);
                 byte[] xBuff;
 
-                #region 自己进行PKCS7补位，用系统自己带的不行
-
+                
                 var msg = new byte[input.Length + 32 - input.Length % 32];
                 Array.Copy(input, msg, input.Length);
                 var pad = Kcs7Encoder(input.Length);
                 Array.Copy(pad, 0, msg, input.Length, pad.Length);
 
-                #endregion 自己进行PKCS7补位，用系统自己带的不行
-
-                #region 注释的也是一种方法，效果一样
-
+                
+                
                 //ICryptoTransform transform = aes.CreateEncryptor();
                 //byte[] xBuff = transform.TransformFinalBlock(msg, 0, msg.Length);
 
-                #endregion 注释的也是一种方法，效果一样
-
+                
                 using (var ms = new MemoryStream())
                 {
                     using (var cs = new CryptoStream(ms, encrypt, CryptoStreamMode.Write))

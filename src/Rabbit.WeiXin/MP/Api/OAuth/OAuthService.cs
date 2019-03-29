@@ -50,15 +50,12 @@ namespace Rabbit.WeiXin.MP.Api.OAuth
     /// </summary>
     public sealed class OAuthService : IOAuthService
     {
-        #region Field
-
+        
         private readonly AccountModel _accountModel;
         private readonly Open.Api.AccountModel _openAccountModel;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的授权服务实例。
         /// </summary>
@@ -79,10 +76,8 @@ namespace Rabbit.WeiXin.MP.Api.OAuth
             _openAccountModel = openAccountModel;
         }
 
-        #endregion Constructor
-
-        #region Implementation of IOAuthService
-
+        
+        
         /// <summary>
         /// 获取OAuth授权的Url地址。
         /// </summary>
@@ -150,11 +145,9 @@ namespace Rabbit.WeiXin.MP.Api.OAuth
             return WeiXinHttpHelper.GetResultByJson<OAuthUserInfo>(url);
         }
 
-        #endregion Implementation of IOAuthService
-    }
+            }
 
-    #region Help Class
-
+    
     /// <summary>
     /// 公众平台OAuth服务扩展方法。
     /// </summary>
@@ -202,14 +195,11 @@ namespace Rabbit.WeiXin.MP.Api.OAuth
     /// </summary>
     public sealed class GetOAuthAccessTokenResult
     {
-        #region Field
-
+        
         private DateTime _createTime;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的实例。
         /// </summary>
@@ -218,10 +208,8 @@ namespace Rabbit.WeiXin.MP.Api.OAuth
             _createTime = DateTime.Now;
         }
 
-        #endregion Constructor
-
-        #region Property
-
+        
+        
         /// <summary>
         /// 访问票据。
         /// </summary>
@@ -272,10 +260,8 @@ namespace Rabbit.WeiXin.MP.Api.OAuth
             }
         }
 
-        #endregion Property
-
-        #region Public Method
-
+        
+        
         /// <summary>
         /// 票据是否过期。
         /// </summary>
@@ -285,10 +271,8 @@ namespace Rabbit.WeiXin.MP.Api.OAuth
             return _createTime.AddSeconds(ExpiresIn) <= DateTime.Now;
         }
 
-        #endregion Public Method
-
-        #region Internal Method
-
+        
+        
         /// <summary>
         /// 根据Json内容创建模型。
         /// </summary>
@@ -301,8 +285,7 @@ namespace Rabbit.WeiXin.MP.Api.OAuth
             return JsonConvert.DeserializeObject<GetOAuthAccessTokenResult>(jsonContent);
         }
 
-        #endregion Internal Method
-    }
+            }
 
     /// <summary>
     /// 通过网页授权得到的用户信息。
@@ -382,5 +365,4 @@ namespace Rabbit.WeiXin.MP.Api.OAuth
         }
     }
 
-    #endregion Help Class
-}
+    }

@@ -38,16 +38,13 @@ namespace Rabbit.WeiXin.MP.Api
     /// </summary>
     public sealed class CommonService : ICommonService
     {
-        #region Field
-
+        
         private readonly AccountModel _accountModel;
         private static readonly ConcurrentDictionary<string, AccessTokenModel> Dictionary = new ConcurrentDictionary<string, AccessTokenModel>();
         private readonly Lazy<AccessTokenModel> _accessTokenLazy;
 
-        #endregion Field
-
-        #region Constructor
-
+        
+        
         /// <summary>
         /// 初始化一个新的通用服务实例。
         /// </summary>
@@ -58,10 +55,8 @@ namespace Rabbit.WeiXin.MP.Api
             _accessTokenLazy = new Lazy<AccessTokenModel>(InternalGetAccessToken);
         }
 
-        #endregion Constructor
-
-        #region Implementation of ICommonService
-
+        
+        
         /// <summary>
         /// 获取公众号的全局唯一票据。
         /// </summary>
@@ -112,10 +107,8 @@ namespace Rabbit.WeiXin.MP.Api
             return array.Select(i => i.Value<string>()).ToArray();
         }
 
-        #endregion Implementation of ICommonService
-
-        #region Private Method
-
+        
+        
         private AccessTokenModel InternalGetAccessToken()
         {
             const string grantType = "client_credential";
@@ -127,18 +120,15 @@ namespace Rabbit.WeiXin.MP.Api
             return WeiXinHttpHelper.GetResultByJson<AccessTokenModel>(url);
         }
 
-        #endregion Private Method
-    }
+            }
 
-    #region Help Class
-
+    
     /// <summary>
     /// 获取公众号的全局唯一票据结果模型。
     /// </summary>
     public sealed class AccessTokenModel
     {
-        #region Constructor
-
+        
         /// <summary>
         /// 初始化一个新的公众号的全局唯一票据。
         /// </summary>
@@ -147,8 +137,7 @@ namespace Rabbit.WeiXin.MP.Api
             CreateTime = DateTime.Now;
         }
 
-        #endregion Constructor
-
+        
         /// <summary>
         /// 公众号的全局唯一票据。
         /// </summary>
@@ -177,5 +166,4 @@ namespace Rabbit.WeiXin.MP.Api
         }
     }
 
-    #endregion Help Class
-}
+    }

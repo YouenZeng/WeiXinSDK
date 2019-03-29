@@ -30,8 +30,7 @@
         /// </summary>
         public string Poiname { get; set; }
 
-        #region Overrides of EventMessageBase
-
+        
         /// <summary>
         /// 事件类型。
         /// </summary>
@@ -40,6 +39,5 @@
             get { return EventType.Location_Select; }
         }
 
-        #endregion Overrides of EventMessageBase
-    }
+            }
 }
