@@ -38,13 +38,13 @@ namespace Rabbit.WeiXin.MP.Api
     /// </summary>
     public sealed class CommonService : ICommonService
     {
-        
+
         private readonly AccountModel _accountModel;
         private static readonly ConcurrentDictionary<string, AccessTokenModel> Dictionary = new ConcurrentDictionary<string, AccessTokenModel>();
         private readonly Lazy<AccessTokenModel> _accessTokenLazy;
 
-        
-        
+
+
         /// <summary>
         /// 初始化一个新的通用服务实例。
         /// </summary>
@@ -55,8 +55,8 @@ namespace Rabbit.WeiXin.MP.Api
             _accessTokenLazy = new Lazy<AccessTokenModel>(InternalGetAccessToken);
         }
 
-        
-        
+
+
         /// <summary>
         /// 获取公众号的全局唯一票据。
         /// </summary>
@@ -107,8 +107,8 @@ namespace Rabbit.WeiXin.MP.Api
             return array.Select(i => i.Value<string>()).ToArray();
         }
 
-        
-        
+
+
         private AccessTokenModel InternalGetAccessToken()
         {
             const string grantType = "client_credential";
@@ -120,15 +120,15 @@ namespace Rabbit.WeiXin.MP.Api
             return WeiXinHttpHelper.GetResultByJson<AccessTokenModel>(url);
         }
 
-            }
+    }
 
-    
+
     /// <summary>
     /// 获取公众号的全局唯一票据结果模型。
     /// </summary>
     public sealed class AccessTokenModel
     {
-        
+
         /// <summary>
         /// 初始化一个新的公众号的全局唯一票据。
         /// </summary>
@@ -137,7 +137,7 @@ namespace Rabbit.WeiXin.MP.Api
             CreateTime = DateTime.Now;
         }
 
-        
+
         /// <summary>
         /// 公众号的全局唯一票据。
         /// </summary>
@@ -166,4 +166,4 @@ namespace Rabbit.WeiXin.MP.Api
         }
     }
 
-    }
+}
