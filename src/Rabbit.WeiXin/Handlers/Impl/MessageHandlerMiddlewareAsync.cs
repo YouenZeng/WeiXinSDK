@@ -1,4 +1,5 @@
-﻿#if !NET40
+﻿#if NET45 || NET451 || NETSTANDARD1_6
+
 using Rabbit.WeiXin.MP.Messages.Events;
 using Rabbit.WeiXin.MP.Messages.Events.CustomMenu;
 using Rabbit.WeiXin.MP.Messages.Events.CustomService;
@@ -409,4 +410,5 @@ namespace Rabbit.WeiXin.Handlers.Impl
         
             }
 }
+
 #endif
